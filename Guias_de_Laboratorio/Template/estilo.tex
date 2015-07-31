@@ -1,0 +1,16 @@
+% definicion del entorno 'sabermas'
+\makeatletter
+\definecolor{shadecolor}{rgb}{0.89,0.91,0.94}
+\newenvironment{sabermas}[1]{%
+% \onecolumngrid
+\vfill
+\begin{shaded}
+  \begin{center}
+  {\textsection{Para saber m\'as}}
+  \end{center}
+  #1
+\sf } 
+{%
+\end{shaded}%
+}
+\makeatother
