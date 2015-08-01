@@ -190,7 +190,7 @@
  \fi
  \vskip 12.85pt
  {\topsep=0pt\partopsep=0pt\parsep=0pt\itemsep=0pt\relax
-  \def\pacsstart##1##2{##1\hskip5pt plus2ptminus2pt##2}%
+  \def\pacsstart##1##2{##1##2}%
   \def\and##1##2{\unskip\ -- ##1\hskip5pt plus2ptminus2pt##2}%
   \trivlist\item[\hskip\labelsep
   {\sffamily\bfseries\objetivoname}]%
