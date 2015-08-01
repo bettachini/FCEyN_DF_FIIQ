@@ -76,9 +76,12 @@
 %
 \def\epj@maketitle{\par
 \ch@ckobl{journalname}{Noname}
+\ch@ckobl{date}{the date of receipt and acceptance should be inserted
+later}
 \ch@ckobl{title}{A title should be given}
 \ch@ckobl{author}{Name(s) and initial(s) of author(s) should be given}
-\ch@ckobl{objetivo}{Abstract is missing.}
+\ch@ckobl{institute}{Address(es) of author(s) should be given}
+\ch@ckobl{abstract}{Abstract is missing.}
 \begingroup
 %
     \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
@@ -157,7 +160,6 @@
    {\LARGE\normalfont\itshape\ignorespaces\@headnote\par}\vskip 3.5mm
  \fi
   \noindent\ignorespaces
-  {\Large Pr\'actica \practnum \unskip : \par} \vskip 0.1cm
   \@title \par}\vskip 11.24pt\relax
  \authorfont
  \if!\@subtitle!\else
@@ -179,9 +181,10 @@
  \noindent\ignorespaces\@author\vskip7.23pt
  \rightskip=0pt\relax
  \small\rm
+ \institutename
  \vskip 12.85pt
  \leftskip=1.5cm\rightskip=\leftskip
- \noindent
+ \noindent\@date
  \if!\@dedic!\else
     \par
     \normalsize\it
@@ -193,12 +196,12 @@
   \def\pacsstart##1##2{##1\hskip5pt plus2ptminus2pt##2}%
   \def\and##1##2{\unskip\ -- ##1\hskip5pt plus2ptminus2pt##2}%
   \trivlist\item[\hskip\labelsep
-  {\sffamily\bfseries\objetivoname}]%
+  {\sffamily\bfseries\abstractname}]%
   \leftskip=1.5cm\rightskip=\leftskip
-  \@objetivo
+  \@abstract
   \if@nopacs\else
-     \ch@ckobl{tematicas}{{XX.XX.XX}{No tematicas code given}}%
-     \@@tematicas
+     \ch@ckobl{PACS.}{{XX.XX.XX}{No PACS code given}}%
+     \@@PACS
   \fi
   \endtrivlist}%
  \if@normhead
@@ -220,11 +223,11 @@
  \vskip22.47pt
 }
 %
-\def\tematicas#1{\gdef\@tematicas{#1}}
-\def\@@tematicas{\par\addvspace\baselineskip\noindent{\sffamily\bfseries
-Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\par}
+\def\PACS#1{\gdef\@PACS{#1}}
+\def\@@PACS{\par\addvspace\baselineskip\noindent{\sffamily\bfseries
+PACS.\enspace}\ignorespaces\expandafter\pacsstart\@PACS\par}
 %
-\def\epjobjetivo#1{\gdef\@objetivo{#1}}
+\def\epjabstract#1{\gdef\@abstract{#1}}
 %
 \def\epjrunnhead{%
     \def\\{\unskip\ \ignorespaces}\def\inst##1{\unskip{}}%
@@ -259,7 +262,7 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
        \protected@xdef\@author{\@author}}
     \fi
     \global\setbox\authrun=\hbox{\small\ignorespaces
-                                 \unhbox\titrun}%
+                                 \@author\unskip: \unhbox\titrun}%
     \ifdim\wd\authrun>\instindent
     \typeout{^^JSVJour Warning: The running head built automatically from
              \string\author\space and \string\title
@@ -280,7 +283,7 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
 \let\@maketitle=\epj@@maketitle
 \let\maketitle=\epj@maketitle
 \let\ProcessRunnHead=\epjrunnhead
-\let\objetivo=\epjobjetivo
+\let\abstract=\epjabstract
 \def\@evenhead{\small\rlap{\thepage}\hfil\leftmark\hfil}%
 \def\@oddhead{\small\hfil\rightmark\hfil\llap{\thepage}}%
 \def\sectcounterend{}
@@ -299,7 +302,7 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
 \def\authorfont{\rmfamily}
 \def\leftlegendglue{\hfil}
 \def\vec#1{\ensuremath{\mathbf{#1}}}
-\journalname{\materia }}
+\journalname{EPJ}}
 %%
 %% End of copy of file `svepj.clo'.
 \endinput

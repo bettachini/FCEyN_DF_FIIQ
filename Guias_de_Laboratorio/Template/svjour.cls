@@ -1,27 +1,6 @@
-% SVJour DOCUMENT CLASS -- version 1.8 for LaTeX2e
-%
-% LaTeX document class for Springer journals
-%
-%%
-%%
-%% \CharacterTable
-%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
-%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
-%%   Digits        \0\1\2\3\4\5\6\7\8\9
-%%   Exclamation   \!     Double quote  \"     Hash (number) \#
-%%   Dollar        \$     Percent       \%     Ampersand     \&
-%%   Acute accent  \'     Left paren    \(     Right paren   \)
-%%   Asterisk      \*     Plus          \+     Comma         \,
-%%   Minus         \-     Point         \.     Solidus       \/
-%%   Colon         \:     Semicolon     \;     Less than     \<
-%%   Equals        \=     Greater than  \>     Question mark \?
-%%   Commercial at \@     Left bracket  \[     Backslash     \\
-%%   Right bracket \]     Circumflex    \^     Underscore    \_
-%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
-%%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{svjour}[1999/09/14
-^^JLaTeX document class for Springer journals - version 1.8]
+^^JLaTeX document class for Laboratory Guides - Pablo Cobelli - Version 1.8]
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
@@ -231,9 +210,9 @@
 \list{--}{\let\makelabel\describelabel}}
 %
 \newdimen\logodepth
-\logodepth=2.2cm
+\logodepth=0cm
 \newdimen\headerboxheight
-\headerboxheight=180pt % 18 10.5dd-lines - 2\baselineskip
+\headerboxheight=5cm % 18 10.5dd-lines - 2\baselineskip
 \newdimen\betweenumberspace          % dimension for space between
 \betweenumberspace=3.33pt            % number and text of titles.
 \newdimen\aftertext                  % dimension for space after
@@ -403,11 +382,8 @@ to\/}: \ignorespaces#1}}\endgroup\ignorespaces}
 %
 \def\maketitle{\par
 \ch@ckobl{journalname}{Noname}
-\ch@ckobl{date}{The date of receipt and acceptance will be inserted by
-the editor}
 \ch@ckobl{title}{A title should be given}
 \ch@ckobl{author}{Name(s) and initial(s) of author(s) should be given}
-\ch@ckobl{institute}{Address(es) of author(s) should be given}
 \begingroup
 %
     \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
@@ -448,7 +424,7 @@ the editor}
        \advance\instindent by-\headlineindent
        \if!\@combi!%
           \global\setbox\combirun=\hbox{\small\rmfamily\unboldmath\ignorespaces
-                                        \@author\unskip: \@title\unskip}%
+                                        \@title\unskip}%
           \def\@tempa{Automatically generated running head}%
        \else
           \global\setbox\combirun=\hbox{\small\rmfamily\unboldmath\ignorespaces
@@ -486,8 +462,9 @@ the editor}
 \def\makeheadbox{{%
 \hbox to0pt{\vbox{\baselineskip=10dd\hrule\hbox
 to\hsize{\vrule\kern3pt\vbox{\kern3pt
-\hbox{\bfseries\@journalname\ manuscript No.}
-\hbox{(will be inserted by the editor)}
+\hbox{\bfseries\@journalname\ }
+\hbox to 504pt{C\'atedra \catedra\ - \periodo\  \hfil {\tt \website} }
+% Los 504pt = 180mm - (3pt + 3pt) de kern de la linea siguiente
 \kern3pt}\hfil\kern3pt\vrule}\hrule}%
 \hss}}}
 
@@ -523,8 +500,7 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
  \noindent\ignorespaces\@author\vskip7.23pt
  \rightskip=0pt\relax
  \normalfont\small\rmfamily
- \institutename
- \vskip 12.85pt \noindent\@date
+ \vskip 12.85pt \noindent
  \if!\@dedic!\else
     \par
     \small\itshape
@@ -823,15 +799,15 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \penalty50\hskip1em\null\nobreak\hfil\squareforqed
 \parfillskip=0pt\finalhyphendemerits=0\endgraf}\fi}}
 
-% Define `abstract' environment
-\def\abstract{\topsep=0pt\partopsep=0pt\parsep=0pt\itemsep=0pt\relax
+% Define `objetivo' environment
+\def\objetivo{\topsep=0pt\partopsep=0pt\parsep=0pt\itemsep=0pt\relax
 \trivlist\item[\hskip\labelsep
-{\bfseries\abstractname}]\if!\abstractname!\hskip-\labelsep\fi}
+{\bfseries\objetivoname}]\if!\objetivoname!\hskip-\labelsep\fi}
 \if@twocolumn
-   \def\endabstract{\endtrivlist\addvspace{5mm}\strich}
+   \def\endobjetivo{\endtrivlist\addvspace{5mm}\strich}
    \def\strich{\hrule\vskip3ptplus12pt\null}
 \else
-   \def\endabstract{\endtrivlist\addvspace{3mm}}
+   \def\endobjetivo{\endtrivlist\addvspace{3mm}}
 \fi
 %
 \newenvironment{verse}
@@ -1116,98 +1092,19 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
     \noindent
     \hb@xt@\bibindent{\hss\@makefnmark\enspace}#1}
 %
-\newcommand\contentsname{Contents}
-\newcommand\listfigurename{List of Figures}
-\newcommand\listtablename{List of Tables}
-\newcommand\refname{References}
-\newcommand\indexname{Index}
+\newcommand\contentsname{Contenidos}
+\newcommand\listfigurename{Indice de Figuras}
+\newcommand\listtablename{Indice de Tablas}
+\newcommand\refname{Referencias}
+\newcommand\indexname{Indice}
 \newcommand\figurename{Fig.}
-\newcommand\tablename{Table}
-\newcommand\partname{Part}
-\newcommand\appendixname{Appendix}
-\newcommand\abstractname{Objetivos\runinend}
+\newcommand\tablename{Tabla}
+\newcommand\partname{Parte}
+\newcommand\appendixname{Apendice}
+\newcommand\objetivoname{Objetivo\runinend}
 \newcommand\ackname{Acknowledgements\runinend}
 \newcommand\noteaddname{Note added in proof}
-% French section
-\def\ds@francais{%
- \typeout{On parle francais.}%
- \def\abstractname{R\'esum\'e\runinend}%
- \def\ackname{Remerciements\runinend}%
- \def\andname{et}%
- \def\lastandname{ et}%
- \def\appendixname{Appendice}
- \def\chaptername{Chapitre}%
- \def\claimname{Pr\'etention}%
- \def\conjecturename{Hypoth\`ese}%
- \def\contentsname{Table des mati\`eres}%
- \def\corollaryname{Corollaire}%
- \def\definitionname{D\'efinition}%
- \def\examplename{Exemple}%
- \def\exercisename{Exercice}%
- \def\figurename{Fig.}%
- \def\keywordname{{\bfseries Mots-cl\'e\runinend}}
- \def\indexname{Index}
- \def\lemmaname{Lemme}%
- \def\contriblistname{Liste des contributeurs}
- \def\listfigurename{Liste des figures}%
- \def\listtablename{Liste des tables}%
- \def\mailname{{\itshape Correspondence to\/}:}
- \def\noteaddname{Note ajout\'ee \`a l'\'epreuve}%
- \def\notename{Remarque}%
- \def\partname{Partie}%
- \def\problemname{Probl\`eme}%
- \def\proofname{\'Epreuve}%
- \def\propertyname{Caract\'eristique}%
-%\def\propositionname{Proposition}%
- \def\questionname{Question}%
-%\def\refname{References}%
- \def\remarkname{Remarque}%
- \def\seename{voyez}
- \def\solutionname{Solution}%
-%\def\subclassname{{\it Subject Classifications\/}:}
- \def\tablename{Tableau}%
- \def\theoremname{Th\'eor\`eme}%
-}
-%
-% German section
-\def\ds@deutsch{\typeout{Man spricht deutsch.}%
- \def\abstractname{Zusammenfassung\runinend}%
- \def\ackname{Danksagung\runinend}%
- \def\andname{und}%
- \def\lastandname{ und}%
- \def\appendixname{Anhang}%
- \def\chaptername{Kapitel}%
- \def\claimname{Behauptung}%
- \def\conjecturename{Hypothese}%
- \def\contentsname{Inhaltsverzeichnis}%
- \def\corollaryname{Korollar}%
-%\def\definitionname{Definition}%
- \def\examplename{Beispiel}%
- \def\exercisename{\"Ubung}%
- \def\figurename{Abb.}%
- \def\keywordname{{\bfseries Schl\"usselw\"orter\runinend}}
- \def\indexname{Index}
-%\def\lemmaname{Lemma}%
- \def\contriblistname{Mitarbeiter}
- \def\listfigurename{Abbildungsverzeichnis}%
- \def\listtablename{Tabellenverzeichnis}%
- \def\mailname{{\itshape Correspondence to\/}:}
- \def\noteaddname{Nachtrag}%
- \def\notename{Anmerkung}%
- \def\partname{Teil}%
-%\def\problemname{Problem}%
- \def\proofname{Beweis}%
- \def\propertyname{Eigenschaft}%
-%\def\propositionname{Proposition}%
- \def\questionname{Frage}%
- \def\refname{Literatur}%
- \def\remarkname{Anmerkung}%
- \def\seename{siehe}
- \def\solutionname{L\"osung}%
-%\def\subclassname{{\it Subject Classifications\/}:}
- \def\tablename{Tabelle}%
-%\def\theoremname{Theorem}%
-}
+
 \AtBeginDocument{\switch@texts}
 \newcommand\today{}
 \edef\today{\ifcase\month\or
