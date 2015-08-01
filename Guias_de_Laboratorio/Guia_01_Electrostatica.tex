@@ -1,0 +1,79 @@
+\documentclass[epj]{svjour}
+
+\def \practnum {1} 
+\def \practica {Electrost\'atica}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\title{\practica}    
+\author{autor}
+
+\objetivo{Determinar el mapa de l\'\i neas o superficies equipotenciales para
+    distintas configuraciones de electrodos conectados a una fuente de baja
+    tensi\'on e inmersos en un medio l\'\i quido poco conductor.
+    \tematicas{Electrost\'atica, potencial electrost\'atico, campo el\'ectrico,
+conductores y diel\'ectricos.}} 
+\maketitle
+
+\section{Introducci\'on}
+
+El campo el\'ectrico en un dado punto del espacio est\'a relacionado con la fuerza
+el\'ectrica que se ejerce sobre una carga de prueba $q$ colocada en ese punto. Si
+en el punto de coordenadas $(x,y)$ existe un campo el\'ectrico $\vec{E}(x,y)$,
+sobre la carga $q$, colocada en ese punto se ejerce una fuerza $\vec{F}(x,y)$.
+Seg\'un la definici\'on de campo el\'ectrico tenemos:
+
+\begin{equation} 
+\vec{F}(x,y) = q \: \vec{E}(x,y).  
+\end{equation}
+
+Como la fuerza $\vec{F}$ es un vector y la carga el\'ectrica $q$ un escalar, resulta claro que el campo el\'ectrico local \vec{E} es tambi\'en
+un vector. Por su parte, el potencial el\'ectrico $V$ est\'a relacionado con el
+trabajo $W$ que debemos realizar para llevar una carga de un punto a otro; m\'as
+precisamente, el cambio en el potencial entre dos puntos 1 y 2 ser\'a: 
+
+\begin{equation}
+    \Delta V_{12} = \frac{W_{12}}{q},
+\end{equation}
+Aqu\'i $W_{12}$ es el trabajo que tenemos que realizar para llevar la
+carga $q$ desde el punto 1 al punto 2. Como el trabajo es una magnitud escalar, el
+potencial tambi\'en lo es. En t\'erminos del campo el\'ectrico, la variaci\'on de potencial entre dos puntos del espacio separados por una distancia infinitesimal $d\vec{l}$ viene dada por:
+
+\begin{equation}
+    dV_{12} \equiv V_2 - V_1 = - \frac{dW}{q} = - \frac{1}{q} \vec{F}(x,y)
+    \cdot d\vec{l} = - \vec{E} \cdot d\vec{l}.
+\end{equation}
+Por lo tanto, las componentes del campo el\'ectrico pueden expresarse en funci\'on del potencial el\'ectrico:
+\begin{equation}
+    \vec{E} = - \vec{\nabla} V,
+\end{equation}
+expresi\'on que resulta v\'alida en cualquier sistema de coordenadas. 
+
+\section{An\'alisis exploratorio semi-cuantitativo}
+
+Equipamiento b\'asico recomendado: Una bandeja de vidrio o acr\'\i lico transparente, de aproximadamente $(30 \times 20 \times 4)$~cm$^3$. Una fuente de tensi\'on continua de 5-15 V. Un volt\'\i metro. Placas met\'alicas (de cobre, bronce, aluminio) para emplear como electrodos.
+
+Utilizando un dispositivo experimental similar al ilustrado en la Fig. 1: 
+
+\begin{enumerate}
+    \item Determine las l\'\i neas equipotenciales en la zona entre los electrodos.
+    \item Para la misma configuraci\'on anterior, coloque un conductor entre los electrodos y determine las l\'\i neas equipotenciales de este nuevo arreglo (ver Fig. 2). En particular, estudie la forma de las  l\'\i neas equipotenciales alrededor del conductor. ?`C\'omo deber\'\i an ser las l\'\i neas equipotenciales dentro del mismo?  
+    \item Repita las mediciones reemplazando ahora el conductor por un aislante. 
+\end{enumerate}
+
+\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
+    referencias.  indeed up to 90\% of the energy is in wave modes for the
+    lower wavenumbers. While this results point that waves dominate the
+    largescale dynamics, it is also clear that they do not govern the smaller
+    scales.  This puts theories in which eddies are not accounted for on.
+\end{sabermas}
+
+% \bibliographystyle{unsrt} \bibliography{biblio}
+
+\end{document}

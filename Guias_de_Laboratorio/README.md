@@ -1,0 +1,87 @@
+Acerca de las guias
+===================
+
+Guias de Laboratorio
+--------------------
+Estas guias de laboratorio estan escritas en LaTeX. 
+
+Listado de guias disponibles
+----------------------------
+
+1. Electrostatica (cuba electrolitica)
+1. Circuitos de corriente continua (curvas I-V, leyes de Ohm, Kirchoff, 
+    Thevenin)
+1. Magnetismo (leyes de Ampere y de Biot-Savart)
+1. Induccion magnetica (fuerza electromotriz inducida y ley de Faraday)
+1. Circuito RC (transitorios de carga y descarga de un circuito RC)
+1. Circuito RLC (resonancia en serie y paralelo)
+1. Ondas mecanicas (ondas estacionarias en una cuerda)
+1. Ondas acusticas (tubo de Kundt)
+1. Interferencia (biprisma de Fresnel)
+1. Difraccion (aberturas, obstaculos)
+1. Redes de difraccion (espectro de la lampara de sodio)
+1. Polarizacion (ley de Malus, polarizacion por reflexion)
+
+
+Acerca del nuevo diseño de figuras
+----------------------------------
+Lo que sigue son unos lineamientos generales para la reformulacion de las
+figuras asociadas a las guias de laboratorio.
+
+- Figuras en formato vectorial.
+- Los medidores de magnitudes electricas (voltimetro, amperimetro, etc.)
+  que aparecen en las figuras deben dibujarse en forma esquematica de acuerdo
+  a su funcionalidad y **no** a su apariencia fisica. 
+- Figuras simples ocupan una sola columna; figuras con complejidad media a alta
+  ocupan todo el ancho del texto.
+- Las figuras asociadas a diagramas circuitales son confeccionadas con
+  `circuitikz`.
+
+Acerca de la bibliografia de referencia
+---------------------------------------
+
+La bibliografia de referencia esta listada en el archivo `Referencias.bib` que 
+es comun a todas las guias. Toda referencia adicional debera cargarse en dicho 
+archivo.
+
+
+Como compilar estas guias manualmente
+-------------------------------------
+
+El comando para procesar con LaTeX estas guias es
+
+    pdflatex GUIA_X.tex
+
+Compilacion automatica de las guias usando Makefile
+---------------------------------------------------
+
+Las guias pueden compilarse usando el Makefile disponible junto con las fuentes
+El comando para compilacion es
+
+    make compilar GUIA_X
+
+Como citar la bibliografia de referencia
+----------------------------------------
+
+Para citar fuentes bibliograficas en el listado de referencias (al final de 
+la guia) sin haberlas citado explicitamente en el cuerpo de la guia, incluir
+el comando
+
+    \nocite{Codigo_referencia}
+
+donde `codigo_referencia` es el *key* hacia la referencia deseada, que debe
+existir en el archivo de bibliografia. Este comando debe incluirse en la 
+fuente `tex` **antes** del llamado a la bibliografia. Varias citas pueden
+incluirse utilizando el mismo comando, separando las *keys* con comas. 
+
+Bibliografia para las guias de laboratorio
+------------------------------------------
+- Purcell
+- Sears
+- Experimentos de fisica?
+- Ondas Crawford
+- Hetch
+
+
+
+
