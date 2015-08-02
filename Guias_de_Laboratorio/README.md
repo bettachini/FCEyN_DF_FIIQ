@@ -48,17 +48,34 @@ archivo.
 Como compilar estas guias manualmente
 -------------------------------------
 
-El comando para procesar con LaTeX estas guias es
+Los comandos para procesar *manualmente* estas guias con LaTeX 
+son los habituales: `pdflatex` y `bibtex`. Opcionalmente, puede utilizarse el
+comando 
 
-    pdflatex GUIA_X.tex
+    latexmk -pdf -silent Nombre_de_la_guia.tex
+
+que compila con tantas pasadas de `pdflatex` y `bibtex` como sea necesario. 
+Esta es la estrategia utilizada para compilar automaticamente las fuentes 
+(ver a continuacion).
 
 Compilacion automatica de las guias usando Makefile
 ---------------------------------------------------
 
-Las guias pueden compilarse usando el Makefile disponible junto con las fuentes
-El comando para compilacion es
+Las guias pueden compilarse en forma automatica usando el Makefile 
+disponible junto con las fuentes.
 
-    make compilar GUIA_X
+El comando para compilacion de una unica guia, supongamos la numero 4, es:
+
+    make G04
+
+notese el cero antepuesto al cuatro. Para compilar la guia 10 hacemos
+
+    make G10
+
+Si se desean compilar todas las guias, el comando es:
+
+    make all
+
 
 Como citar la bibliografia de referencia
 ----------------------------------------
@@ -67,20 +84,30 @@ Para citar fuentes bibliograficas en el listado de referencias (al final de
 la guia) sin haberlas citado explicitamente en el cuerpo de la guia, incluir
 el comando
 
-    \nocite{Codigo_referencia}
+    \nocite{codigo_referencia}
 
 donde `codigo_referencia` es el *key* hacia la referencia deseada, que debe
 existir en el archivo de bibliografia. Este comando debe incluirse en la 
 fuente `tex` **antes** del llamado a la bibliografia. Varias citas pueden
 incluirse utilizando el mismo comando, separando las *keys* con comas. 
+Cabe recordar que 
+
+    \nocite{*}
+
+tiene el efecto de citar todas las referencias bibliograficas disponibles en el
+archivo `Referencias.bib`.
 
 Bibliografia para las guias de laboratorio
 ------------------------------------------
-- Purcell
-- Sears
-- Experimentos de fisica?
-- Ondas Crawford
-- Hetch
+- Purcell, Electricidad y magnetismo.
+- Crawford, Ondas.
+- Alonso & Finn, Fisica.
+- Jenkins & White, Fundamentals of optics.
+- Hetch & Zajac, Optica.
+- Rodriguez Trelles, Temas de electricidad y magnetismo.
+- Reitz, Milford & Christy, Fundamentos de la teoria electromagnetica.
+- Sears, Ford & Freedman, Fisica universitaria. 
+
 
 
 
