@@ -2,7 +2,6 @@
 \makeatletter
 \definecolor{shadecolor}{rgb}{0.89,0.91,0.94}
 \newenvironment{sabermas}[1]{%
-% \onecolumngrid
 \vfill
 \begin{shaded}
   \begin{center}
@@ -14,3 +13,6 @@
 \end{shaded}%
 }
 \makeatother
+
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+

@@ -58,7 +58,8 @@ G12: Guia_12_Polarizacion.tex
 	latexmk -pdf -silent Guia_12_Polarizacion.tex
 
 clean:
-	@rm -f *.log *.aux *.bbl *.blg *.idx *.toc *.out
+	@rm -f *.log *.aux *.bbl *.blg *.idx *.toc *.out *.fdb_latexmk *.fls
 
 clean-all:
-	@rm -f *.pdf *.log *.aux *.bbl *.blg *.idx *.toc *.out
+	@make clean
+	@rm -f *.pdf 

@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Guia_Modelo"] 1438469507 "Guia_Modelo.aux" "Guia_Modelo.bbl" "Guia_Modelo" 1438469845
+["bibtex Guia_Modelo"] 1438470690 "Guia_Modelo.aux" "Guia_Modelo.bbl" "Guia_Modelo" 1438473772
   "/usr/local/texlive/2015/texmf-dist/bibtex/bst/babelbib/babunsrt.bst" 1327967917 25192 a5a3c594883eacf5787ea94771d09de9 ""
-  "Guia_Modelo.aux" 1438469845 1953 aca4b718f00a160838311de990c6f7cd ""
+  "Guia_Modelo.aux" 1438473659 1953 aca4b718f00a160838311de990c6f7cd ""
   "Guia_Modelo.bcf" 0 -1 0 ""
   "Referencias.bib" 1438469504 1461 aa3fae07c52ba6d735ef9d90e8df0699 ""
   (generated)
-  "Guia_Modelo.bbl"
   "Guia_Modelo.blg"
+  "Guia_Modelo.bbl"
 ["latex"] 1438468093 "Guia_Modelo.tex" "Guia_Modelo.dvi" "Guia_Modelo" 1438468095
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -196,9 +196,9 @@
   "svjour.cls" 1438398405 38077 39592058219c754f83fb46c7c92b9dc9 ""
   (generated)
   "Guia_Modelo.aux"
-  "Guia_Modelo.dvi"
   "Guia_Modelo.log"
-["pdflatex"] 1438469843 "Guia_Modelo.tex" "Guia_Modelo.pdf" "Guia_Modelo" 1438469845
+  "Guia_Modelo.dvi"
+["pdflatex"] 1438473772 "Guia_Modelo.tex" "Guia_Modelo.pdf" "Guia_Modelo" 1438473772
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -388,16 +388,16 @@
   "/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1432479641 1764542 91654ba72bdb667e84ea24f076ae16d8 ""
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1436716731 3849859 343d93b9c7cc791a2a52b864504d21f4 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "Guia_Modelo.aux" 1438469845 1953 aca4b718f00a160838311de990c6f7cd ""
-  "Guia_Modelo.bbl" 1438469507 1568 db4c865657eae94e713bc3da1dc94e6b "bibtex Guia_Modelo"
-  "Guia_Modelo.tex" 1438469370 6552 462ec2b0aa3b2b9c7ae25c973c101b47 ""
+  "Guia_Modelo.aux" 1438473659 1953 aca4b718f00a160838311de990c6f7cd ""
+  "Guia_Modelo.bbl" 1438470690 1568 db4c865657eae94e713bc3da1dc94e6b "bibtex Guia_Modelo"
+  "Guia_Modelo.tex" 1438473770 8627 8cd49abc5a0178af8deb7046ba283793 ""
   "catedrayperiodo.tex" 1438396234 188 80b100a560c4abe95e494bd4d053bd63 ""
-  "estilo.tex" 1438356920 277 37726e3a0778cc7e5900cbd55e12eeb4 ""
+  "estilo.tex" 1438470628 260 b29d8d98719e762bd6302da6427825d9 ""
   "hyphenation_rules.tex" 1438356920 166 5eb834787f34ebef323238ab3b1aa3b3 ""
-  "paquetes.tex" 1438468681 324 84ff5870525c3797e8412d6bfefe9ae0 ""
-  "svepj.clo" 1438469840 10039 7393e796f21d8f5e233a443daf3114d8 ""
-  "svjour.cls" 1438398405 38077 39592058219c754f83fb46c7c92b9dc9 ""
+  "paquetes.tex" 1438470631 404 38379c8250e35ce235b9c5d9f3bea142 ""
+  "svepj.clo" 1438473276 10069 52fe1baec81939af6ba826c2005f57bc ""
+  "svjour.cls" 1438471355 38077 39592058219c754f83fb46c7c92b9dc9 ""
   (generated)
-  "Guia_Modelo.log"
-  "Guia_Modelo.aux"
   "Guia_Modelo.pdf"
+  "Guia_Modelo.aux"
+  "Guia_Modelo.log"

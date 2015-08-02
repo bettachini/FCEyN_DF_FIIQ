@@ -23,7 +23,9 @@
 \ProvidesFile{svepj.clo}
               [1997/11/12 v1.1
       style option for The European Physical Journal]
-\typeout{SVJour Class option: svepj.clo for The European Physical Journal}
+% \typeout{SVJour Class option: svepj.clo for The European Physical Journal}
+\typeout{Option Class svepj.clo para guias de laboratorio de enseñanza}
+\typeout{Pablo Cobelli - August 2015}
 \DeclareOption{leqno}{\input{leqno.clo}}
 \let\if@nopacs\iffalse
 \DeclareOption{nopacs}{\let\if@nopacs\iftrue}
@@ -76,9 +78,9 @@
 %
 \def\epj@maketitle{\par
 \ch@ckobl{journalname}{Noname}
-\ch@ckobl{title}{A title should be given}
-\ch@ckobl{author}{Name(s) and initial(s) of author(s) should be given}
-\ch@ckobl{objetivo}{Abstract is missing.}
+% \ch@ckobl{title}{A title should be given}
+\def \@title {\practica}
+\ch@ckobl{objetivo}{Falta el objetivo de la pr\'actica.}
 \begingroup
 %
     \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
@@ -212,8 +214,6 @@
     \global\@minipagetrue
     \global\everypar{\global\@minipagefalse\global\everypar{}}
  \else
-    \typeout{\the\c@auth\space author names and}
-    \typeout{\the\c@inst\space institutes processed}
     \global\@tempdima=\pagetotal
     \global\advance\@tempdima by22.47pt
  \fi
@@ -234,13 +234,11 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
     \if!\the\titlerunning!\else
       \edef\@title{\the\titlerunning}%
     \fi
-    \global\setbox\titrun=\hbox{\small\rm\ignorespaces\@title}%
+    \global\setbox\titrun=\hbox{\small\rm\ignorespaces Pr\'actica \practnum : \@title}%
     \ifdim\wd\titrun>\instindent
-       \typeout{^^JSVJour Warning: Title too long for running head.}%
-       \typeout{Please supply a shorter form with \string\titlerunning
-                \space prior to \string\maketitle}%
-       \global\setbox\titrun=\hbox{\small\rm
-       Title Suppressed Due to Excessive Length}%
+       \global\setbox\titrun=\hbox{\small\rm%
+       \ignorespaces Pr\'actica \practnum : \practcor}%
+       %Title Suppressed Due to Excessive Length}%
     \fi
     \xdef\@title{\copy\titrun}%
 %
@@ -256,20 +254,11 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
     \else
        \gdef\and{\unskip, \ignorespaces}%
        {\def\and{\noexpand\protect\noexpand\and}%
-       \protected@xdef\@author{\@author}}
+       \protected@xdef\@author{ %\@author
+       }}
     \fi
     \global\setbox\authrun=\hbox{\small\ignorespaces
                                  \unhbox\titrun}%
-    \ifdim\wd\authrun>\instindent
-    \typeout{^^JSVJour Warning: The running head built automatically from
-             \string\author\space and \string\title
-             ^^Jexceeds the pagewidth, please supply a shorter form
-             ^^Jwith \string\authorrunning\space and
-             \string\titlerunning\space prior to \string\maketitle}%
-    \global\setbox\authrun=\hbox{\small\rm Please give a shorter version
-          with: {\tt\string\authorrunning\space and
-             \string\titlerunning\space prior to \string\maketitle}}%
-    \fi
     \xdef\@author{\copy\authrun}%
     \markboth{\@author}{\@author}%
 }
@@ -298,8 +287,8 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
     {-21dd plus-4pt minus-4pt}{-1pt}{\normalsize\sffamily\bfseries}}
 \def\authorfont{\rmfamily}
 \def\leftlegendglue{\hfil}
-\def\vec#1{\ensuremath{\mathbf{#1}}}
-\journalname{\materia }}
+% \def\vec#1{\ensuremath{\mathbf{#1}}}
+\journalname{\materia}}
 %%
 %% End of copy of file `svepj.clo'.
 \endinput

@@ -364,7 +364,8 @@ to\/}: \ignorespaces#1}}\endgroup\ignorespaces}
     \else
        \gdef\and{\unskip, \ignorespaces}%
        {\def\and{\noexpand\protect\noexpand\and}%
-       \protected@xdef\@author{\@author}}
+       \protected@xdef\@author{ %\@author
+       }}
     \fi
     \global\setbox\authrun=\hbox{\small\rmfamily\unboldmath\ignorespaces
                                  \@author\unskip}%
@@ -383,7 +384,7 @@ to\/}: \ignorespaces#1}}\endgroup\ignorespaces}
 \def\maketitle{\par
 \ch@ckobl{journalname}{Noname}
 \ch@ckobl{title}{A title should be given}
-\ch@ckobl{author}{Name(s) and initial(s) of author(s) should be given}
+% \ch@ckobl{author}{Name(s) and initial(s) of author(s) should be given}
 \begingroup
 %
     \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
@@ -520,17 +521,17 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 }
 %
 \if@mathematic
-   \def\vec#1{\ensuremath{\mathchoice
-                     {\mbox{\boldmath$\displaystyle\mathbf{#1}$}}
-                     {\mbox{\boldmath$\textstyle\mathbf{#1}$}}
-                     {\mbox{\boldmath$\scriptstyle\mathbf{#1}$}}
-                     {\mbox{\boldmath$\scriptscriptstyle\mathbf{#1}$}}}}
-\else
-   \def\vec#1{\ensuremath{\mathchoice
-                     {\mbox{\boldmath$\displaystyle#1$}}
-                     {\mbox{\boldmath$\textstyle#1$}}
-                     {\mbox{\boldmath$\scriptstyle#1$}}
-                     {\mbox{\boldmath$\scriptscriptstyle#1$}}}}
+%   \def\vec#1{\ensuremath{\mathchoice
+%                     {\mbox{\boldmath$\displaystyle\mathbf{#1}$}}
+%                     {\mbox{\boldmath$\textstyle\mathbf{#1}$}}
+%                     {\mbox{\boldmath$\scriptstyle\mathbf{#1}$}}
+%                     {\mbox{\boldmath$\scriptscriptstyle\mathbf{#1}$}}}}
+%\else
+%   \def\vec#1{\ensuremath{\mathchoice
+%                     {\mbox{\boldmath$\displaystyle#1$}}
+%                     {\mbox{\boldmath$\textstyle#1$}}
+%                     {\mbox{\boldmath$\scriptstyle#1$}}
+%                     {\mbox{\boldmath$\scriptscriptstyle#1$}}}}
 \fi
 %
 \def\tens#1{\ensuremath{\mathsf{#1}}}
