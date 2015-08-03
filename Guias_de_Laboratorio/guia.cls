@@ -153,7 +153,6 @@
 %
 \def\epj@maketitle{\par
 \ch@ckobl{journalname}{\materia}
-% \ch@ckobl{title}{A title should be given}
 \def \@title {\practica}
 \ch@ckobl{objetivo}{Falta el objetivo de la pr\'actica.}
 \begingroup
@@ -235,7 +234,8 @@
  \fi
   \noindent\ignorespaces
   {\Large Pr\'actica \practnum \unskip : \par} \vskip 0.1cm
-   \noindent \@title \par}\vskip 11.24pt\relax
+   \noindent \@title \par}
+   \vskip 11.24pt\relax
  \authorfont
  \if!\@subtitle!\else
    {\large\sffamily\bfseries
@@ -267,10 +267,10 @@
  \fi
  \vskip 12.85pt
  %%
- \if@twocolumn 
  {\topsep=0pt\partopsep=0pt\parsep=0pt\itemsep=0pt\relax
   \def\pacsstart##1##2{##1##2}%
   \def\and##1##2{\unskip\ -- ##1\hskip5pt plus2ptminus2pt##2}%
+  \if@twocolumn
   \trivlist\item[\hskip\labelsep
   {\sffamily\bfseries\objetivoname}]%
   \leftskip=1.5cm\rightskip=\leftskip
@@ -279,8 +279,11 @@
      \ch@ckobl{tematicas}{{XX.XX.XX}{No tematicas code given}}%
      \@@tematicas
   \fi
-  \endtrivlist}%
   \fi
+  \if@restonecol
+  \vskip2cm
+  \fi
+  \endtrivlist}%
  \if@normhead
     \egroup % end of header box
     \@tempdima=\headerboxheight
@@ -293,9 +296,16 @@
     \global\everypar{\global\@minipagefalse\global\everypar{}}
  \else
     \global\@tempdima=\pagetotal
+    \if@twocolumn
     \global\advance\@tempdima by22.47pt
+    \fi
  \fi
+ \if@twocolumn
  \vskip22.47pt
+ \fi
+ \if@restonecol
+ \vskip-2cm
+ \fi
 }
 %
 \def\tematicas#1{\gdef\@tematicas{#1}}
@@ -516,7 +526,12 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
 \newdimen\logodepth
 \logodepth=0cm
 \newdimen\headerboxheight
+\if@twocolumn
 \headerboxheight=5cm % 18 10.5dd-lines - 2\baselineskip
+\fi
+\if@restonecol
+\headerboxheight=5cm
+\fi
 \newdimen\betweenumberspace          % dimension for space between
 \betweenumberspace=3.33pt            % number and text of titles.
 \newdimen\aftertext                  % dimension for space after
@@ -765,6 +780,9 @@ to\/}: \ignorespaces#1}}\endgroup\ignorespaces}
  \global\let\and\relax}
 
 \def\makeheadbox{{%
+\if@restonecol
+\vskip-0.33cm
+\fi
 \hbox to0pt{\vbox{\baselineskip=10dd\hrule\hbox
 to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \hbox{\bfseries\@journalname\ }
