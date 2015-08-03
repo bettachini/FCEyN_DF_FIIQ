@@ -1,8 +1,8 @@
-% definicion del entorno 'sabermas'
+%----------------------------------------------------------
+% Definicion del entorno 'sabermas'
 \makeatletter
 \definecolor{shadecolor}{rgb}{0.89,0.91,0.94}
 \newenvironment{sabermas}[1]{%
-% \onecolumngrid
 \vfill
 \begin{shaded}
   \begin{center}
@@ -14,3 +14,24 @@
 \end{shaded}%
 }
 \makeatother
+
+%----------------------------------------------------------
+% Definicion del entorno 'problema'
+\newcounter{ContadorProblema}
+\setcounter{ContadorProblema}{0}
+
+\newenvironment{problema}[1]
+{% 
+\refstepcounter{ContadorProblema}
+\noindent%
+{\bf Problema \arabic{ContadorProblema}.}
+{\sc {#1}}\par\nobreak\par\nobreak%
+\medskip }
+{%  
+\par \bigskip \vskip 0.3cm
+}
+
+%----------------------------------------------------------
+% Definicion/Redefinicion de estilos
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+

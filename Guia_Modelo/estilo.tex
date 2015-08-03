@@ -23,11 +23,9 @@
 \newenvironment{problema}[1]
 {% 
 \refstepcounter{ContadorProblema}
-\addcontentsline{toc}{subsection}{\numberline{\arabic{ContadorProblema}} #1}%
 \noindent%
-\hskip -0.9cm \raisebox{0.06pc}{$ \Square $} \hskip 0.5175cm
 {\bf Problema \arabic{ContadorProblema}.}
-{\sc {#1}} \par \par %
+{\sc {#1}}\par\nobreak\par\nobreak%
 \medskip }
 {%  
 \par \bigskip \vskip 0.3cm

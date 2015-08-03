@@ -91,7 +91,12 @@ y nuclea **todas** las referencias asociadas a la totalidad de las guias.
 Entornos adicionales provistos por la clase
 -------------------------------------------
 
-Hasta el momento la clase provee un entorno adicional denominado `sabermas`.
+Hasta el momento la clase provee los siguientes entornos adicionales, 
+- `problema`
+- `sabermas`
+
+sabermas
+--------
 La idea es emplear este entorno para motivar al estudiante a leer conceptos
 mas avanzados asociados a esta guia. Para hacer uso del entorno, se emplea la
 construccion habitual
@@ -100,6 +105,15 @@ construccion habitual
     ...
     \end{sabermas}
 
+problema
+--------
+Este entorno sirve para las guias de problemas. Admite ademas un campo
+de titulo para el ejercicio. La sintaxis es:
+
+    \begin{problema}{Titulo del problema (opcional)}
+        Un auto se mueve a 10 km/h. Calcule la distancia que habra recorrido
+        en 1 hora. 
+    \end{problema}
 
 
 
