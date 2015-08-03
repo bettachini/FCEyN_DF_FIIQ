@@ -13,6 +13,9 @@
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 \DeclareOption{twocolumn}{\@twocolumntrue}
+% opcion practicas o laboratorio
+\DeclareOption{laboratorio}{\@twocolumntrue}
+\DeclareOption{problemas}{\@restonecoltrue}
 \DeclareOption{fleqn}{\input{fleqn.clo}\AtEndOfClass{\mathindent\z@}}
 \let\if@mathematic\iftrue
 \let\if@numbook\iffalse
@@ -1124,6 +1127,9 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \pagenumbering{arabic}
 \if@twocolumn
    \twocolumn
+\fi
+\if@restonecol
+    \onecolumn
 \fi
 \if@referee
    \makereferee

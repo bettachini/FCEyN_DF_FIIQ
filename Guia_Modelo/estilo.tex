@@ -1,0 +1,39 @@
+%----------------------------------------------------------
+% Definicion del entorno 'sabermas'
+\makeatletter
+\definecolor{shadecolor}{rgb}{0.89,0.91,0.94}
+\newenvironment{sabermas}[1]{%
+\vfill
+\begin{shaded}
+  \begin{center}
+  {\textsection{Para saber m\'as}}
+  \end{center}
+  #1
+\sf } 
+{%
+\end{shaded}%
+}
+\makeatother
+
+%----------------------------------------------------------
+% Definicion del entorno 'problema'
+\newcounter{ContadorProblema}
+\setcounter{ContadorProblema}{0}
+
+\newenvironment{problema}[1]
+{% 
+\refstepcounter{ContadorProblema}
+\addcontentsline{toc}{subsection}{\numberline{\arabic{ContadorProblema}} #1}%
+\noindent%
+\hskip -0.9cm \raisebox{0.06pc}{$ \Square $} \hskip 0.5175cm
+{\bf Problema \arabic{ContadorProblema}.}
+{\sc {#1}} \par \par %
+\medskip }
+{%  
+\par \bigskip \vskip 0.3cm
+}
+
+%----------------------------------------------------------
+% Definicion/Redefinicion de estilos
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+
