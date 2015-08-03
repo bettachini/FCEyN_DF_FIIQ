@@ -1,7 +1,0 @@
-PWD /Users/pablo/UnderDevelopment/Fisica_II_Q/Guias_de_Laboratorio/Guia_Modelo
-INPUT /usr/local/texlive/2015/texmf.cnf
-INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT svjour.cls
-OUTPUT svjour.log
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map
