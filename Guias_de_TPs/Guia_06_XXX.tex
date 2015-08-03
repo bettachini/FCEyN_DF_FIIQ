@@ -1,0 +1,108 @@
+\documentclass[problemas]{guia}
+
+\def \practnum {6} 
+\def \practica {Circuitos de corriente alterna}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\usepackage{enumerate}
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\maketitle
+
+\begin{problema}{}
+    Un condensador $C = 1$ $\mu$F está conectado en paralelo con una 
+    inductancia $L = 0.1$ H cuya resistencia interna vale $R = 1$ $\Omega$. 
+    Se conecta la combinación a una fuente alterna de 220 V y 50 Hz. Determine:
+    \begin{enumerate}[(a)]
+        \item la corriente por el condensador,
+        \item la corriente por la inductancia,
+        \item la corriente total por la fuente,
+        \item la potencia total disipada.
+\end{enumerate}
+    Construir el diagrama vectorial en el plano complejo para cada paso.
+\end{problema}
+
+\begin{problema}{}
+    Una resistencia $R$, un condensador $C$ y una inductancia $L$ están 
+    conectados en serie.
+    \begin{enumerate}[(a)]
+        \item Calcular la impedancia compleja de la combinación y su valor en 
+            resonancia (esto es, cuando la reactancia $X$ se anula).
+        \item Construir el diagrama vectorial. Empleándolo, hallar el valor de 
+            la impedancia cuando $X = R$ y para la resonancia. Notar que 
+            existen dos valores de frecuencia ($\omega_1$ y $\omega_2$) para 
+            los cuales se tiene $X = R$.
+        \item Trazar la curva de resonancia y hallar el ancho de banda 
+            $(\omega_2 - \omega_1)$.
+        \item Repetir los puntos anteriores suponiendo ahora que los mismos 
+            componentes se conectan en paralelo.
+    \end{enumerate}
+\end{problema}
+
+\begin{problema}{}
+    Tres impedancias $Z_1, Z_2$ y $Z_3$ están conectadas en paralelo a una 
+    fuente de 40 V y 50 Hz. Suponiendo que $Z_1 = 10$ $\Omega$, 
+    $Z_2 = 20 \: (1+j)$ $\Omega$ y $Z_3 = (3-4j)$ $\Omega$:
+    \begin{enumerate}[(a)]
+        \item Calcular la admitancia, conductancia y susceptancia en cada rama.
+        \item Calcular la conductancia y la susceptancia resultante de la 
+            combinación.
+        \item Calcular la corriente en cada rama, la corriente resultante y la
+            potencia total disipada.
+        \item Trazar el diagrama vectorial del circuito.
+    \end{enumerate}
+\end{problema}
+
+\begin{problema}{}
+    Una inductancia $L$ que tiene una resistencia interna $r$ está conectada en
+    serie con otra resistencia $R = 200$ $\Omega$. Cuando estos elementos están
+    conectados a una fuente de 220 V y 50 Hz, la caída de tensión sobre la 
+    resistencia $R$ es de 50 V. Si se altera solamente la frecuencia de la 
+    fuente, de modo que sea 60 Hz, la tensión sobre $R$ pasa a ser 44 V. 
+    Determinar los valores de $L$ y $r$.
+\end{problema}
+
+
+\begin{problema}{}
+    En el circuito indicado, la fuente de tensión $E$ entrega 100 V con una 
+    frecuencia de 50 Hz y los elementos que lo constituyen son:
+    $C = 20$ $\mu$F, $L = 0.25$ H, y $R_1 = R_2 = R_3 = 10$ $\Omega$. 
+    \begin{enumerate}[(a)]
+        \item Calcular la impedancia equivalente a la derecha de los puntos 
+            A y B.
+        \item Calcular la corriente que circula por cada resistencia.
+        \item Construir el diagrama vectorial del circuito.
+\end{enumerate}
+\end{problema}
+
+\begin{problema}{}
+    Para el circuito de la figura:
+    \begin{enumerate}[(a)]
+        \item Hallar el valor de la impedancia compleja equivalente.
+        \item Determinar su valor en resonancia.
+        \item ¿Cuánto vale la frecuencia $\omega$ en este caso?
+        \item Construir el diagrama vectorial de la corriente por cada una
+            de las ramas.
+    \end{enumerate}
+\end{problema}
+
+\begin{problema}{}
+    Para el circuito de la figura, hallar:
+    \begin{enumerate}[(a)]
+        \item Las	corrientes	que	circulan por	cada	rama empleando el 
+            método de mallas.
+        \item La potencia suministrada por cada generador.
+        \item La potencia disipada en cada impedancia. \\
+
+    Datos: $V_1 = 30$ V, $V_2 = 20$ V, $Z_1 = 5$ $\Omega$, $Z_2 = 4$ $\Omega$,
+    $Z_3  = (2+3j)$ $\Omega$, $Z_4 = 5j$ $\Omega$, $Z_5 = 6$ $\Omega$ y 
+    $f = 50$ Hz.
+    \end{enumerate}
+\end{problema}
+
+\end{document}
