@@ -266,6 +266,8 @@
     \noindent\@dedic
  \fi
  \vskip 12.85pt
+ %%
+ \if@twocolumn 
  {\topsep=0pt\partopsep=0pt\parsep=0pt\itemsep=0pt\relax
   \def\pacsstart##1##2{##1##2}%
   \def\and##1##2{\unskip\ -- ##1\hskip5pt plus2ptminus2pt##2}%
@@ -278,6 +280,7 @@
      \@@tematicas
   \fi
   \endtrivlist}%
+  \fi
  \if@normhead
     \egroup % end of header box
     \@tempdima=\headerboxheight

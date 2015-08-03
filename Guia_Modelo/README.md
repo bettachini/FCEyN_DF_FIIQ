@@ -11,12 +11,12 @@ Declaraciones iniciales
 El documento `tex` esta encabezado por la eleccion de la clase asociada,
 en este caso
 
-    \documentclass[laboratorio]{clase_guias}
+    \documentclass[laboratorio]{guia}
 
 para generar una guia de laboratorio. Para generar una guia de problemas, la
 opcion es 
 
-    \documentclass[problemas]{clase_guias}
+    \documentclass[problemas]{guia}
 
 Definiendo el titulo y numero de la guia
 ----------------------------------------
