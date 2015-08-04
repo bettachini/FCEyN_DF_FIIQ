@@ -42,6 +42,31 @@ con declarar
 Estas definiciones se realizan **antes** de introducir el 
 `\begin{document}`. 
 
+Acerca de la inclusion de figuras
+---------------------------------
+En el caso de las guias de trabajos de laboratorio, la inclusion de figuras
+se realiza en la forma usual, via el codigo
+
+    \begin{figure}
+        \includegraphics{archivo_figura}
+        \caption{Epigrafe de la figura.}
+        \label{fig:label_de_la_figura}
+    \end{figure}
+
+Por otro lado, las figuras asociadas a los problemas de las guias de 
+ejercicios, se incluyen mas facilmente a traves de la propia definicion
+del problema (ver seccion aparte para mas detalle):
+
+    \begin{problema}[archivo_figura]
+        Si un auto viaja a 100 km/h, que distancia recorre en 30 minutos?
+    \end{problema}
+
+En ambos casos, se recomienda poner los archivos de figura en un subdirectorio
+cuyo nombre es el mismo que el archivo fuente `LaTeX` que da nombre a la guia.
+No hace falta definir el `path` de figura (via `\graphicspath{...}`) ya que
+esto **lo hace automaticamente** el archivo `estilo.tex`. 
+
+
 Definiendo el objetivo y las tematicas  de la guia
 --------------------------------------------------
 
@@ -107,14 +132,24 @@ construccion habitual
 
 problema
 --------
-Este entorno sirve para las guias de problemas. Admite ademas un campo
-de titulo para el ejercicio. La sintaxis es:
+Este entorno sirve para las guias de problemas, definiendo en forma completa
+un ejercicio o problema. Admite ademas un campo
+**opcional** mediante el cual se especifica el nombre de fichero de la figura
+asociada al ejercicio en cuestion (si tiene una; de lo contrario, al dejarlo
+vacio o no especificarlo, no se incorpora figura alguna).
 
-    \begin{problema}{Titulo del problema (opcional)}
+    \begin{problema}[nombre_del_archivo_de_figura.extension]
         Un auto se mueve a 10 km/h. Calcule la distancia que habra recorrido
         en 1 hora. 
     \end{problema}
 
+Las figuras asociadas a cada problema se ubican automaticamente de la siguiente
+forma:
+- Las figuras se escalan de forma tal de caber en un area de ancho 5 cm.
+- Se les agrega  un epigrafe que las vincula al problema.
+- Si se trata de la figura de un problema cuyo numero es impar, la figura va
+  al lado del texto del problema, la derecha de la pagina.
+- Si es la figura de un problema par, la figura va a la izquierda. 
 
 
 
