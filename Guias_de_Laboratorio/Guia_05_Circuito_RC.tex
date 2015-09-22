@@ -1,0 +1,113 @@
+\documentclass[laboratorio]{guia}
+
+\def \practnum {5} 
+\def \practica {Circuito RC: reg\'\i menes transitorio y estacionario}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\objetivo{Estudiar los comportamientos de un circuito RC en dos reg\'\i menes de operaci\'on 
+    distintos: (a) transitorio y (b) estacionario. Para el transitorio, se
+    propone estudiar los procesos de carga y descarga de un capacitor en un
+    circuito RC. Caracterizar ambos determinando qu\'e tipo de evoluc\'on
+    temporal presentan, y midiendo los tiempos caracter\'\i sticos asociados
+    a cada uno de ellos. Para el estacionario, se busca determinar la respuesta
+    del circuito al excitarlo con una se\~nal peri\'odica, variando la
+    frecuencia de trabajo del sistema.
+    \tematicas{Circuitos de corrientes variables en el tiempo, RC, carga y
+        descarga de un capacitor, tiempo caracter\'\i stico, filtros pasaaltos y
+    pasabajos}} 
+\maketitle
+
+\section{Introducci\'on}
+
+Considere el circuito RC mostrado en la Figura \ref{fig:circuitoRC}, en el
+cual el capacitor se encuentra completamente descargado inicialmente y la
+llave S, abierta. Al cerrarse esta \'ultima, la diferencia de potencial
+$V$ impuesta por la fuente genera una corriente $I$ en el circuito. Esta 
+corriente tendr\'a el efecto de llevar cargas de signo opuesto a las caras 
+del capacitor. Resulta intuitivo que esta corriente no ser\'a constante en el tiempo; 
+en particular esperamos que la misma se anule cuando el capacitor se haya
+cargado. 
+
+
+Un capacitor de capacidad $C$ conectado a una fuente de tensi\'on $V$ constante 
+adquiere una carga $q = C V$. Esto nos permite conocer la ca\'\i da de
+potencial sobre nuestro capacitor. Por otro lado, la ecuaci\'on circuital para
+el circuito RC resulta simplemente:
+
+\begin{equation}
+    V = RI + \frac{q}{C},
+\end{equation}
+donde tanto la corriente $I$ como la carga $q$ est\'an variando instante a
+instante, es decir que $I \equiv I(t)$ y $q \equiv q(t)$. Recordemos, por otro
+lado, que tanto la tensi\'on $V$ de la fuente, la resistencia $R$ del resistor
+y la capacidad $C$ del capacitor son constantes, dado que describen propiedades de
+cada uno de dichos elementos. Empleando ahora la definici\'on de corriente,
+
+$$ I = \frac{dq}{dt}, $$
+podemos reescribir la \'ultima ecuaci\'on en t\'erminos de una \'unica
+funci\'on inc\'ognita, ya sea $q(t)$ o $I(t)$. Vamos a elegir reexpresarla en
+funci\'on de $q(t)$, de lo que se obtiene
+
+\begin{equation}
+    V = R \frac{dq}{dt}(t) + \frac{1}{C} q(t).
+\end{equation}
+
+Esta ecuaci\'on es una ecuaci\'on diferencial ordinaria de orden 1 para $q(t)$, 
+cuya soluci\'on nos dar\'a la evoluci\'on temporal (desde un instante inicial
+dado) de la carga en el capacitor. 
+Para resolverla, debemos especificar adem\'as una condici\'on inicial para la 
+carga $q(t)$ en el capacitor. Dado que estamos considerando el caso en el que
+el mismo 
+
+\begin{figure}[t!]
+    \centering
+    \begin{tikzpicture}
+        % -- Circuito RC -- % \draw[step=0.5, very thin, black!20] (-1, -0.5) grid (6, 2.5);
+        \path (0, 0) coordinate (ref_gnd);
+        \draw
+          (ref_gnd) to[battery1=\(V\)] ++(0,2)
+                    to[R=\(R\)] ++(3,0) 
+                    to[C=\(C\)] ++(0,-2) 
+          -- (ref_gnd);
+    \end{tikzpicture}
+    \vspace{0.5cm}
+    \caption{Esquema del circuito RC empleado.}
+    \label{fig:circuitoRC}
+\end{figure}
+
+\section{Carga y descarga de un capacitor}
+
+En esta primera etapa se estudia el proceso de carga y descarga del capacitor.
+
+
+
+
+\section{An\'alisis exploratorio semi-cuantitativo}
+
+Equipamiento b\'asico recomendado: Una bandeja de vidrio o acr\'\i lico transparente, de aproximadamente $(30 \times 20 \times 4)$~cm$^3$. Una fuente de tensi\'on continua de 5-15 V. Un volt\'\i metro. Placas met\'alicas (de cobre, bronce, aluminio) para emplear como electrodos.
+
+Utilizando un dispositivo experimental similar al ilustrado en la Fig. 1: 
+
+\begin{enumerate}
+    \item Determine las l\'\i neas equipotenciales en la zona entre los electrodos.
+    \item Para la misma configuraci\'on anterior, coloque un conductor entre los electrodos y determine las l\'\i neas equipotenciales de este nuevo arreglo (ver Fig. 2). En particular, estudie la forma de las  l\'\i neas equipotenciales alrededor del conductor. ?`C\'omo deber\'\i an ser las l\'\i neas equipotenciales dentro del mismo?  
+    \item Repita las mediciones reemplazando ahora el conductor por un aislante. 
+\end{enumerate}
+
+\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
+    referencias.  indeed up to 90\% of the energy is in wave modes for the
+    lower wavenumbers. While this results point that waves dominate the
+    largescale dynamics, it is also clear that they do not govern the smaller
+    scales.  This puts theories in which eddies are not accounted for on.
+\end{sabermas}
+
+% \bibliographystyle{unsrt} \bibliography{biblio}
+
+\end{document}
