@@ -84,22 +84,65 @@ el mismo
 
 \section{Carga y descarga de un capacitor}
 
-En esta primera etapa se estudia el proceso de carga y descarga del capacitor.
+En esta primera etapa se estudia el proceso de carga y descarga del capacitor. 
 
+\subsection{Midiendo en forma manual con mult\'\i metro}
 
+De realizar la experiencia con cron\'ometro, se sugiere elegir valores de $R$ y
+$C$ de manera tal que el producto $RC$ sea igual o superior a 100 segundos. De
+esta forma los procesos de carga y descarga son lo sufientemente lentos como
+para poder tomar los datos manualmente. 
 
+\subsection{Midiendo a trav\'es de la placa de adquisici\'on SensorDAQ}
 
-\section{An\'alisis exploratorio semi-cuantitativo}
+En cualquiera de las dos modalidades que se elija medir, se busca responder
+las siguientes preguntas:
+\begin{itemize}
+    \item Cu\'al es el tiempo caracter\'\i stico (de carga y descarga) que se 
+        obtiene de las  mediciones? Es el mismo para ambos procesos?
+    \item Cu\'al es el valor de tensi\'on que se alcanza al llegar al 
+        r\'egimen estacionario? 
+    \item En el proceso de descarga, sobre que elemento disipativo se 
+        descarga el capacitor?
+    \item Es posible estimar la resistencia interna del mult\'\i metro? 
+\end{itemize}
 
-Equipamiento b\'asico recomendado: Una bandeja de vidrio o acr\'\i lico transparente, de aproximadamente $(30 \times 20 \times 4)$~cm$^3$. Una fuente de tensi\'on continua de 5-15 V. Un volt\'\i metro. Placas met\'alicas (de cobre, bronce, aluminio) para emplear como electrodos.
+Repetir las mediciones utilizando otro valor de tensi\'on de trabajo $V'$
+para la fuente. Observa cambios en el tiempo caracter\'\i stico producto de
+esta modificaci\'on?
 
-Utilizando un dispositivo experimental similar al ilustrado en la Fig. 1: 
+\section{Respuesta estacionaria}
 
-\begin{enumerate}
-    \item Determine las l\'\i neas equipotenciales en la zona entre los electrodos.
-    \item Para la misma configuraci\'on anterior, coloque un conductor entre los electrodos y determine las l\'\i neas equipotenciales de este nuevo arreglo (ver Fig. 2). En particular, estudie la forma de las  l\'\i neas equipotenciales alrededor del conductor. ?`C\'omo deber\'\i an ser las l\'\i neas equipotenciales dentro del mismo?  
-    \item Repita las mediciones reemplazando ahora el conductor por un aislante. 
-\end{enumerate}
+En esta parte de la pr\'actica reemplazaremos la fuente de tensi\'on 
+constante por una de tensi\'on alterna. Estudiaremos la respuesta del sistema
+cuando se excita con distintas frecuencias. Para ello se utiliza un generador
+de funciones como fuente de tensi\'on alterna y un osciloscopio para medir
+las se\~nales de inter\'es. 
+
+\subsection{Filtro pasabajos; circuito integrador}
+
+Para esta instancia se sugieren elegir valores de $R$ y $C$ de manera que 
+su producto sea del orden de 100~$\mu$s. Aplicando una se\~nal sinusoidal de
+amplitud de 5 Volts, estudie la respuesta del sistema en funci\'on de la
+frecuencia. 
+
+Grafique luego el cociente entre las amplitudes de la se\~nal de salida y
+la de entrada como funci\'on de la frecuencia $f = \omega/(2\pi)$. Intente 
+determinar el desfasaje $\phi$ entre la se\~nal de entrada y la de salida; que 
+puede definirse como $\phi = \omega \Delta t$. Estudie como var\'\i a este 
+desfasaje en funci\'on de la frecuencia $f$. 
+
+A continuaci\'on cambie la forma de onda de la se\~nal de entrada a una 
+onda cuadrada. Nuevamente, estudie la forma de la se\~nal de salida en 
+funci\'on de la frecuencia. Existe alguna relaci\'on entre ambas? Intente
+describir mediante los modelos propuestos los resultados experimentales 
+obtenidos. 
+
+\subsection{Filtro pasaaltos; circuito derivador}
+
+Repita las mediciones tomadas en el caso anterior, pero esta vez midiendo 
+la diferencia de tensi\'on (o ca\'\i da de potencial) sobre el resistor. 
+Discuta las similitudes y diferencias. 
 
 \begin{sabermas} Para saber mas haria falta leer un poco las siguientes
     referencias.  indeed up to 90\% of the energy is in wave modes for the
