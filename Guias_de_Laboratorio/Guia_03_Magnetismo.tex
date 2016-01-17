@@ -1,0 +1,97 @@
+\documentclass[laboratorio]{guia}
+
+\def \practnum {3} 
+\def \practica {Magnetost\'atica: Leyes de Amp\`ere y de Biot-Savart}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\objetivo{%
+    El objetivo de esta gu\'\i a experimental consiste en determinar
+    cuantitativamente el valor y direcci\'on del campo magn\'etico terrestre
+    local (en el laboratorio) mediante dos m\'etodos experimentales diferentes.
+    \tematicas{Compo magn\'etico, magnetost\'atica, ley de Am\`ere, ley de
+        Biot-Savart, sonda Hall.}} 
+\maketitle
+
+\section{Medici\'on de campos magn\'eticos usando una sonda Hall}
+
+Las sondas (o puntas) Hall son dispositivos basados en el efecto Hall que
+permiten medir con gran precisi\'on la componente del campo magn\'etico
+perpendicular a su plano de trabajo. El voltaje Hall se mide mediante un
+volt\'\i metro. 
+
+En el caso concreto de las sondas Hall disponibles en el laboratorio, su uso
+requiere conectar la sonda al puerto USB de la PC para alimentar el
+amplificador de la misma. El amplificador se utiliza para aumentar la tensi\'on
+de salida de la sonda Hall (que es del orden de los 3 mV/Gauss) a un rango
+de 0 a 4 V. 
+
+Conecte la sonda Hall y familiar\'\i cese con su funcionamiento y su
+operaci\'on. Consulte a su docente si tiene dudas respecto de cualquiera de
+estos dos aspectos. Una vez que comprenda c\'omo funciona la sonda, explore la
+respuesta de la misma variando su orientaci\'on espacial. De esta forma,
+encuentre el plano de trabajo de la misma. 
+
+\section{Calibraci\'on de la sonda Hall}
+
+Sabiendo que el campo magn\'etico en el interior de una bobina por la cual
+circula una corriente cont\'\i nua es uniforme, podemos emplear este campo para 
+realizar la calibraci\'on de la sonda Hall (?`por qu\'e raz\'on es necesario
+calibrar la sonda?). 
+
+Usando una fuente de tensi\'on, una resistencia variable, una bobina de
+geometr\'\i a y n\'umero de vueltas conocidas y un amper\'\i metro, arme un
+circuito de modo que pueda -simult\'aneamente- aplicar y medir la corriente que
+circula por la bobina. 
+
+Dise\~ne un montaje que le permita mantener la sonda Hall en el centro de la
+bobina. El m\'odulo del campo magn\'etico en el centro de la bobina de radio $R$, longitud
+$L$, n\'umero de vueltas $N$, por la que circula una corriente $I$ puede
+aproximarse por:
+\begin{equation}
+    |\vec{B}| = \alpha \frac{\mu_0}{2R} N I,
+    \end{equation}
+siendo $\alpha$ un factor de proporcionalidad que depende de las caracter\'\i
+sticas geom\'etricas detalladas de la bobina, y que en nuestro caso puede
+aproximarse por $\alpha \approx 0.28$ (verificar en cada caso).
+
+Con estos datos, calibre la sonda Hall utilizando como patr\'on el campo
+magn\'etico de la bobina.
+
+
+\section{Determinaci\'on del campo magn\'etico terrestre}
+
+Una vez calibrada la sonda Hall, se proponen las siguientes dos actividades
+para determinar el campo magn\'etico terrestre:
+\begin{itemize}
+    \item Mida el campo magn\'etico terrestre empleando la sonda Hall.
+        Explore tambi\'en qu\'e ocurre cuando rota la punta en 180$^\circ$
+        respecto de su eje, de modo que el campo magn\'etico atraviese la punta
+        Hall por el extremo opuesto.
+
+    \item Ubique una br\'ujula en el centro de la bobina empleada
+        anteriormente. Con la bobina sin corriente determine la direcci\'on del
+        campo magn\'etico terrestre. Aseg\'urese de alinear correctamente la
+        bobina, de modo que su eje quede perpendicular a la direcci\'on del
+        campo magn\'etico terrestre local. Luego haga pasar una corriente por
+        las espiras y determine la dependencia del \'angulo que se desv\'\i a
+        la aguja (que llamaremos $\theta$) con el campo $\vec{B}$ de la bobina. A partir de la medici\'on
+        del \'angulo de desviaci\'on, y conociendo el campo generado por la
+        bobina, se puede determinar el campo terrestre.
+
+    \item Grafique $B_\text{bobina}$ vs $\tan \left( \theta \right)$, empleando
+        para ello no menos de 6 puntos. ?`Qu\'e an\'alisis puede realizar a
+        partir de esta gr\'afica?
+\end{itemize}
+
+\nocite{Alonso1998,Purcell1988,Reitz1996,Trelles1984}
+\bibliographystyle{unsrt} 
+\bibliography{Bibliografia}
+
+\end{document}

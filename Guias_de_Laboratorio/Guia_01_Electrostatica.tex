@@ -8,7 +8,7 @@
 \input{estilo}
 
 \input{hyphenation_rules}
-% \graphicspath{{./guia8/}}
+\graphicspath{{./Guia_01_Electrostatica/}}
 
 \begin{document} 
 \objetivo{Determinar el mapa de l\'\i neas o superficies equipotenciales para
@@ -30,17 +30,21 @@ Seg\'un la definici\'on de campo el\'ectrico tenemos:
 \vec{F}(x,y) = q \: \vec{E}(x,y).  
 \end{equation}
 
-Como la fuerza $\vec{F}$ es un vector y la carga el\'ectrica $q$ un escalar, resulta claro que el campo el\'ectrico local $\vec{E}$ es tambi\'en
-un vector. Por su parte, el potencial el\'ectrico $V$ est\'a relacionado con el
+Como la fuerza $\vec{F}$ es un vector y la carga el\'ectrica $q$ un escalar, resulta
+claro que el campo el\'ectrico local $\vec{E}$ es tambi\'en
+un vector. 
+
+Por su parte, el potencial el\'ectrico $V$ est\'a relacionado con el
 trabajo $W$ que debemos realizar para llevar una carga de un punto a otro; m\'as
-precisamente, el cambio en el potencial entre dos puntos 1 y 2 ser\'a: 
+precisamente, el cambio en el potencial entre dos puntos 1 y 2 del espacio ser\'a: 
 
 \begin{equation}
     \Delta V_{12} = \frac{W_{12}}{q},
 \end{equation}
 Aqu\'i $W_{12}$ es el trabajo que tenemos que realizar para llevar la
 carga $q$ desde el punto 1 al punto 2. Como el trabajo es una magnitud escalar, el
-potencial tambi\'en lo es. En t\'erminos del campo el\'ectrico, la variaci\'on de potencial entre dos puntos del espacio separados por una distancia infinitesimal $d\vec{l}$ viene dada por:
+potencial tambi\'en lo es. En t\'erminos del campo el\'ectrico, la variaci\'on de potencial 
+entre dos puntos del espacio separados por una distancia infinitesimal $d\vec{l}$ viene dada por:
 
 \begin{equation}
     dV_{12} \equiv V_2 - V_1 = - \frac{dW}{q} = - \frac{1}{q} \vec{F}(x,y)
@@ -52,25 +56,108 @@ Por lo tanto, las componentes del campo el\'ectrico pueden expresarse en funci\'
 \end{equation}
 expresi\'on que resulta v\'alida en cualquier sistema de coordenadas. 
 
+Veamos tambi\'en que cuando $dV=0$, como ocurre sobre una l\'\i nea
+equipotencial, la componente de $\vec{E}$ sobre esta l\'\i nea es nula. En
+otras palabras, $\vec{E}$ es siempre perpendicular a las l\'\i neas 
+(o, m\'as generalmente, superficies) equipotenciales. La idea central de este
+experimento consiste en determinar experimentalmente, para una dada
+configuraci\'on, las l\'\i neas equipotenciales (es decir, las l\'\i neas sobre
+las cuales el potencial es constante). A partir de estas l\'\i neas
+equipotenciales, se pueden luego hallar las l\'\i neas de campo $\vec{E}$, 
+trazando l\'\i neas perpendiculares a las equipotenciales.
+
 \section{An\'alisis exploratorio semi-cuantitativo}
 
-Equipamiento b\'asico recomendado: Una bandeja de vidrio o acr\'\i lico transparente, de aproximadamente $(30 \times 20 \times 4)$~cm$^3$. Una fuente de tensi\'on continua de 5-15 V. Un volt\'\i metro. Placas met\'alicas (de cobre, bronce, aluminio) para emplear como electrodos.
+En esta parte de la Gu\'\i a se propone realizar un an\'alisis
+semi-cuantitativo de la configuraci\'on espacial de las l\'\i neas
+equipotenciales, es decir, del conjunto de puntos en el espacio que se
+encuentran caracterizados por un mismo valor del potencial $V$.
 
-Utilizando un dispositivo experimental similar al ilustrado en la Fig. 1: 
+Para ello, se recomienda utilizar una bandeja de vidrio o acr\'\i lico
+transparente, de aproximadamente 
+$30 \times 20 \times 4)$~cm$^3$, que har\'a las veces de contenedor del 
+l\'\i quido poco conductor. Como electrodos, se propone utilizar dos placas 
+met\'alicas (de cobre, bronce y/o aluminio), que se dispondran parcialmente 
+inmersas en el l\'\i quido. Como l\'\i quido de trabajo se emplear\'a agua. 
+A fin de suministrar una diferencia de potencial entre las placas, se 
+utilizar\'a una fuente de tensi\'on continua de 5-15 V. Finalmente, a fin de
+determinar el valor del potencial en un punto dado del espacio, se har\'a uso
+de un volt\'\i metro.
 
+Con estos elementos, se propone el armado del dispositivo experimental
+ilustrado esquem\'aticamente en la Figura~\ref{fig:1}.
+
+\begin{figure}[t!]
+    \centering
+ \includegraphics[width=8.5cm]{LG01--000.png}
+\caption{Esquema del dispositivo experimental propuesto (bandeja en vista
+superior). La bandeja de material aislante contiene agua. Las l\'\i neas
+gruesas cont\'\i nuas representan los electrodos met\'alicos. En el punto
+de coordenadas $(x,y)$, se mide el valor del potencial el\'ectrico $V(x,y)$.}
+    \label{fig:1}
+\end{figure}
+
+Habiendo montado el dispositivo experimental, realice unos primeros intentos
+exploratorios para determinar el potencial electrost\'atico en diversos puntos
+del espacio, asegur\'andose de que comprende c\'omo funciona el sistema. 
+
+Una vez que se haya familiarizado con su funcionamiento y operaci\'on, realice
+las siguientes actividades:
 \begin{enumerate}
     \item Determine las l\'\i neas equipotenciales en la zona entre los electrodos.
-    \item Para la misma configuraci\'on anterior, coloque un conductor entre los electrodos y determine las l\'\i neas equipotenciales de este nuevo arreglo (ver Fig. 2). En particular, estudie la forma de las  l\'\i neas equipotenciales alrededor del conductor. ?`C\'omo deber\'\i an ser las l\'\i neas equipotenciales dentro del mismo?  
-    \item Repita las mediciones reemplazando ahora el conductor por un aislante. 
+    \item Para la misma configuraci\'on anterior, coloque un conductor entre los 
+        electrodos y determine las l\'\i neas equipotenciales de este nuevo 
+        arreglo (ver Figura~\ref{fig:2}). En particular, estudie la forma de las  l\'\i neas 
+        equipotenciales alrededor del conductor. ?`C\'omo deber\'\i an ser las 
+        l\'\i neas equipotenciales dentro del mismo?  
+    \item Repita las mediciones reemplazando ahora el conductor por un aislante de forma
+        geom\'etrica simple.
 \end{enumerate}
 
-\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
-    referencias.  indeed up to 90\% of the energy is in wave modes for the
-    lower wavenumbers. While this results point that waves dominate the
-    largescale dynamics, it is also clear that they do not govern the smaller
-    scales.  This puts theories in which eddies are not accounted for on.
-\end{sabermas}
 
-% \bibliographystyle{unsrt} \bibliography{biblio}
+\begin{figure}[t!]
+    \centering
+\includegraphics[width=5cm]{LG01--001.png}
+\caption{Esquema del segundo dispositivo experimental propuesto (bandeja en vista
+superior). La bandeja de material aislante contiene agua. Las l\'\i neas
+gruesas cont\'\i nuas representan los electrodos met\'alicos, entre los cuales
+se ha dispuesto ahora un medio conductor de forma geom\'etrica simple. Del mismo
+modo que antes, en un punto
+de coordenadas $(x,y)$, se mide el valor del potencial el\'ectrico $V(x,y)$
+para esta nueva configuraci\'on.}
+    \label{fig:2}
+\end{figure}
+
+\section{C\'omo trabajar en esta gu\'\i a}
+
+\begin{itemize}
+    \item Mida por lo menos 6 a 8 puntos para cada equipotencial, con
+        separaciones de aproximadamente 1 cm. Luego, en papel milimetrado,
+        marque estos puntos y \'unalos con l\'\i neas cont\'\i nuas. Estas son
+        las l\'\i neas equipotenciales correspondientes a la geometr\'\i a de
+        electrodos (o electrodos y conductor o aislante) elegida. Para cada
+        configuraci\'on, determine al menos 10 l\'\i neas equipotenciales,
+        tratando de que alguna de ellas se encuentren cerca de cada electrodo y
+        algunas en las zonas centrales del arreglo.
+
+    \item Determine las l\'\i neas equipotenciales y las l\'\i neas de campo
+        el\'ectrico para por lo menos dos configuraciones de electrodos. En
+        cada caso discuta las zonas donde el campo es mayor.
+
+    \item Preste particular atenci\'on a la configuraci\'on en la que se
+        dispone un aislante entre los electrodos. En particular estudie las
+        l\'\i neas equipotenciales alrededor del aislante. ?`C\'omo son las
+        l\'\i neas de campo y el campo mismo sobre su superficie? ?`C\'omo
+        puede explicar lo que observa en este caso?
+
+    \item Para el caso del conductor entre los electrodos, observe la
+        configuraci\'on de l\'\i neas equipotenciales alrededor del conductor.
+        ?`C\'omo son las l\'\i neas de campo sobre la superficie del conductor?
+\end{itemize}
+
+
+\nocite{Alonso1998,Purcell1988,Reitz1996,Trelles1984}
+\bibliographystyle{unsrt} 
+\bibliography{Bibliografia}
 
 \end{document}

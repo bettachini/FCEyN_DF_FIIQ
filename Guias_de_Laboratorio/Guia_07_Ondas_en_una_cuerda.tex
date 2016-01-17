@@ -1,0 +1,100 @@
+\documentclass[laboratorio]{guia}
+
+\def \practnum {6} 
+\def \practica {Ondas estacionarias en una cuerda}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\objetivo{%
+    Realizar un estudio experimental de ondas estacionarias en cuerdas con sus
+    dos extremos fijos. Se propone medir los modos normales de vibraci\'on,
+    determinando experimentalmente sus frecuencias caracter\'\i sticas. En
+    funci\'on de estos resultados, se busca determinar la velocidad de las
+    ondas en t\'erminos de la tensi\'on y la densidad de masa de la cuerda.
+    \tematicas{ondas estacionarias, ondas en una cuerda, modos normales,
+frecuencias caracter\'\i sticas, velocidad de propagaci\'on.}} 
+\maketitle
+
+\section{Consideraciones preliminares}
+
+La Figura~\ref{fig:1} muestra un esquema del dispositivo experimental propuesto
+para el desarrollo de esta experiencia. En el mismo puede verse una cuerda (en
+trazo azul grueso) sujeta en sus dos extremos. El extremo izquierdo est\'a fijo
+a una pared (punto A), mientras que el extremo derecho est\'a fijo a una polea
+(punto B). La distancia entre los puntos A y B es $L$. Vinculado 
+mec\'anicamente con la cuerda, m\'as alla de la polea, se
+encuentra un objeto de masa $m$, en reposo debido a la acci\'on combinada de la
+gravedad y la tensi\'on provista por la cuerda. Cerca del punto A, un {\it
+driver} mec\'anico imprime a la cuerda un movimiento oscilatorio arm\'onico de
+frecuencia y amplitud controladas, provisto por un generador de funciones.
+
+Para llevar a cabo la experiencia se dispone de una cuerda cuya masa por unidad de longitud $\mu$ puede
+determinar experimentalmente. La tensi\'on mec\'anica que act\'ua
+sobre la cuerda est\'a determinada por el peso colgado en uno de sus extremos,
+seg\'un se observa en la Figura~\ref{fig:1}. 
+
+La longitud de onda de cada modo excitado por el {\it driver} est\'a
+determinada por la longitud de la cuerda, ya que la longitud $L$ es siempre
+igual a un n\'umero entero de veces media longitud de onda.
+
+Antes de continuar, aseg\'urese de poder responder estas dos preguntas:
+\begin{itemize}
+    \item ?`Por qu\'e vale $L = n (\lambda/2)$, siendo $n$ entero? 
+    \item ?`C\'omo har\'\i a para conocer $\mu$ en sus condiciones de trabajo?
+\end{itemize}
+
+
+\section{Desarrollo de la experiencia}
+
+\subsection{Primera parte}
+Para un determinado valor de los par\'ametros $T$ y $\mu$, determine las
+frecuencias $f$ para los primeros 8 modos normales de excitaci\'on de la
+cuerda. Para cada uno de dichos modos, determine tambi\'en la longitud de onda
+correspondiente $\lambda$ y, a partir de estos par\'ametros, calcule la
+velocidad $v$ de la onda para cada modo. Grafique la velocidad de la onda en
+funci\'on del orden de cada modo. ?`Qu\'e concluye a partir de sus resultados
+experimentales?
+
+\subsection{Segunda parte}
+
+Para una cuerda dada, var\'\i e la masa $m$ colgada en uno de los extremos de
+la cuerda. Para cada valor de $m$ empleado, determine la velocidad de la onda
+en la cuerda. Tome al menos 8 valores de $m$. En cada caso, determine el valor
+de $T$ y $\mu$. Grafique entonces $v$ en funci\'on de $\sqrt{T/\mu}$. ?`Qu\'e
+conclusi\'on puede obtener en este caso?
+
+\subsection{Tercera parte}
+
+Cuando var\'\i a la masa $m$, se var\'\i a tanto la tensi\'on $T$ como la
+densidad de masa $m$. Demuestre que la relaci\'on entre la velocidad de la onda
+y la masa $m$ colgada es:
+\begin{equation}
+    v = \sqrt{\frac{m (L_0 + k m)g}{m_c}},
+    \label{eq:1}
+\end{equation}
+donde $m_c$ es la masa total de la cuerda, $L_0$ su longitud natural y $k$ la
+constante de estiramiento de la cuerda. ?`C\'omo puede determinar el valor de $k$
+experimentalmente? Discuta su idea con el docente y lleve adelante la
+medici\'on de $k$. Luego compare en un gr\'afico la relaci\'on encontrada
+experimentalmente entre $v$ y $m$; y en el mismo gr\'afico indique la curva que
+esperar\'\i a te\'oricamente para esta relaci\'on usando la ecuaci\'on
+\eqref{eq:1}. Describa sus conclusiones en este caso.
+
+
+
+\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
+    referencias.  indeed up to 90\% of the energy is in wave modes for the
+    lower wavenumbers. While this results point that waves dominate the
+    largescale dynamics, it is also clear that they do not govern the smaller
+    scales.  This puts theories in which eddies are not accounted for on.
+\end{sabermas}
+
+% \bibliographystyle{unsrt} \bibliography{biblio}
+
+\end{document}

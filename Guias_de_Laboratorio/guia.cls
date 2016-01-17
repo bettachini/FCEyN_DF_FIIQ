@@ -233,7 +233,7 @@
    {\LARGE\normalfont\itshape\ignorespaces\@headnote\par}\vskip 3.5mm
  \fi
   \noindent\ignorespaces
-  {\Large Pr\'actica \practnum \unskip : \par} \vskip 0.1cm
+  {\Large \practicaname\ \practnum \unskip : \par} \vskip 0.1cm
    \noindent \@title \par}
    \vskip 11.24pt\relax
  \authorfont
@@ -1425,6 +1425,7 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \newcommand\partname{Parte}
 \newcommand\appendixname{Apendice}
 \newcommand\objetivoname{Objetivo\runinend}
+\newcommand\practicaname{Pr\'actica}
 \newcommand\ackname{Acknowledgements\runinend}
 \newcommand\noteaddname{Note added in proof}
 

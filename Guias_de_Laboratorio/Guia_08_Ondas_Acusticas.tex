@@ -1,0 +1,139 @@
+\documentclass[laboratorio]{guia}
+
+\def \practnum {7} 
+\def \practica {Ondas ac\'usticas en un tubo}
+
+\input{catedrayperiodo} 
+\input{paquetes} 
+\input{estilo}
+
+\input{hyphenation_rules}
+% \graphicspath{{./guia8/}}
+
+\begin{document} 
+\objetivo{%
+    El objetivo de esta pr\'actica es realizar un estudio experimental de ondas
+    ac\'usticas en tubos semicerrados; en el cu\'al se
+    determinen experimentalmente las frecuencias de resonancia y la velocidad de
+    propagaci\'on del sonido.
+    \tematicas{ondas estacionarias, ondas ac\'usticas, modos normales,
+frecuencias caracter\'\i sticas, velocidad de propagaci\'on del sonido en aire.}} 
+\maketitle
+
+\section{Consideraciones preliminares}
+
+La Figura~\ref{fig:1} muestra un esquema del dispositivo experimental propuesto
+para el desarrollo de esta experiencia. Se dispone de un emisor ac\'ustico
+(parlante) conectado a un generador de funciones capaz de emitir sonidos puros,
+es decir, de una frecuencia bien definida. Asimismo, dicha frecuencia puede
+variarse en un amplio rango de valores dentro del espectro audible. Tambi\'en
+se cuenta con detectores de sonido (micr\'ofonos) conectados a osciloscopios
+(o, en su defecto, a sistemas de adquisici\'on de datos asistidos por
+computadora). 
+
+\section{Desarrollo de la experiencia}
+
+\subsection{Frecuencias de resonancia}
+
+Usando un tubo semicerrado, comience por medir cuidadosamente las dimensiones
+del tubo; su longitud $L$ y di\'ametro interno $d$. Para determinar sin
+ambig\"uedad las frecuencias de resonancia asociadas a la presencia del tubo,
+coloque el emisor y el receptor enfrentados, justo en el borde abierto del
+tubo, seg\'un se muestra esquem\'aticamente en la Figura~\ref{fig:1}. Trate de
+ubicar las frecuencias de resonancia, variando la frecuencia del generador de
+funciones que alimenta el emisor. Preste particular atenci\'on a que la
+amplitud del generador de funciones permanezca constante, lo cual se puede
+lograr monitoreando la amplitud de la se\~nal de entrada al emisor. Las
+resonancias se manifiestan por un pronunciado aumento de la amplitud de la
+se\~nal de salida del receptor. En otras palabras, a las frecuencias de
+resonancia, para una dada amplitud de la excitaci\'on del emisor, la respuesta
+del receptor (su amplitud) tiene un m\'aximo relativo (dentro de un dado
+intervalo de frecuencia).
+
+En estas condiciones:
+\begin{itemize}
+    \item Determine por lo menos las primeras 5 resonancias en cada caso.
+        Grafique la amplitud del receptor en funci\'on de la frecuencia
+        aplicada. Para este estudio, intente mantener fija la geometr\'\i a del
+        sistema (tubo, emisor, receptor, etc.) mientras var\'\i a la frecuencia
+        de operaci\'on.
+    \item Para verificar que las resonancias encontradas efectivamente est\'an
+        asociadas al tubo y no a caracter\'\i sticas particulares del sistema
+        emisor-receptor, retire el tubo y repita el estudio anterior, midiendo
+        a las mismas frecuencias. Grafique luego la amplitud del receptor en
+        funci\'on de la frecuencia aplicada, de ser posible sobre el mismo
+        gr\'afico anterior. ?`Qu\'e puede concluir de este estudio acerca del
+        origen de dichas resonancias?
+    \item Grafique las frecuencias de resonancia del tubo en funci\'on del
+        orden $n$ de cada resonancia, es decir, el \'\i ndice que identifica su
+        aparici\'on cuando se incrementa mon\'otonamente la frecuencia. Busque
+        determinar la frecuencia fundamental (correspondiente a $n=0$) por
+        debajo de la cual no se detectan otras resonancias.
+\end{itemize}
+
+
+\subsection{Dependencia con la longitud del tubo}
+
+En esta segunda parte nos proponemos determinar la variaci\'on en la respuesta
+del sistema cuando se modifica la longitud del tubo considerado. Para ello, la
+propuesta consiste en repetir el mismo estudio precedente para -al menos- dos
+longitudes distintas a la empleada en la primera parte.
+
+
+En estas nuevas condiciones:
+\begin{itemize}
+    \item Grafique las frecuencias de resonancia $f_n$ del tubo en funci\'on
+        del orden $n$ de cada resonancia.
+    \item Grafique el producto $f_nL$ en funci\'on del orden $n$, para todos
+        los casos estudiados.
+    \item Suponiendo que en el tubo semicerrado caben exactamente $(2n+1)$
+        cuartos de longitudes de onda, trate de dar cuenta de sus resultados
+        experimentales.
+    \item A partir del gr\'afico de $f_nL$ en funci\'on de $(2n+1)$ y el modelo
+        sugerido en el inciso anterior, determine el valor de la velocidad del
+        sonido en aire. ?`C\'omo se compara su resultado con los valores
+        tabulados? Discuta y especule acerca de las posibles discrepancias
+        entre uno y otro. 
+    \item Una consecuencia de tener un di\'ametro finito en el tubo es que su
+        longitud efectiva es mayor que su longitud geom\'etrica. Esto causa que
+        el n\'umero $n$ de medias longitudes de onda que caben en dicha
+        longitud efectiva $L_\text{ef}$ satisfaga
+        \begin{equation*}
+            L_\text{ef} = L + \alpha d = n \frac{\lambda_n}{2}.
+        \end{equation*}
+        ?`C\'omo afecta esta correcci\'on sus conclusiones respecto de la
+        velocidad de propagaci\'on del sonido en aire? Tenga en cuenta que el valor de $\alpha$ es del
+        orden de 0.4 para un tubo semicerrado, y del orden de 0.8 para uno
+        abierto.
+\end{itemize}
+
+\subsection{Ancho espectral de las resonancias}
+
+Determine, para las resonancias encontradas en la primera parte, sus
+respectivos semianchos en el espacio de frecuencias. Estos se definen como las
+distancias (en frecuencia) en las que la amplitud cae a la mitad de su valor en
+resonancia.
+
+\subsection{Estudio en funci\'on de la posici\'on del detector}
+
+Para por lo menos 3 frecuencias de resonancia, estudie experimentalmente c\'omo
+var\'\i an la amplitud y la fase en funci\'on de la posici\'on del detector en
+el tubo. Grafique sus resultados. ?`Qu\'e puede concluir acerca de estos
+resultados? ?`Est\'an de acuerdo con la teor\'\i a propuesta? ?`C\'omo es la
+amplitud en los extremos del tubo? Concretamente: en los extremos abierto y
+cerrado, ?`hay nodos o extremos de amplitud? Explique sus resultados con
+argumentos f\'\i sicos.
+
+
+
+
+\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
+    referencias.  indeed up to 90\% of the energy is in wave modes for the
+    lower wavenumbers. While this results point that waves dominate the
+    largescale dynamics, it is also clear that they do not govern the smaller
+    scales.  This puts theories in which eddies are not accounted for on.
+\end{sabermas}
+
+% \bibliographystyle{unsrt} \bibliography{biblio}
+
+\end{document}

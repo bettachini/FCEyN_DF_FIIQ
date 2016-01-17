@@ -8,7 +8,7 @@
 \input{estilo}
 
 \input{hyphenation_rules}
-% \graphicspath{{./guia8/}}
+\graphicspath{{./Guia_05_Circuito_RC/}}
 
 \begin{document} 
 \objetivo{Estudiar los comportamientos de un circuito RC en dos reg\'\i menes de operaci\'on 
@@ -57,6 +57,7 @@ funci\'on de $q(t)$, de lo que se obtiene
 
 \begin{equation}
     V = R \frac{dq}{dt}(t) + \frac{1}{C} q(t).
+    \label{eq:ecuacionRC}
 \end{equation}
 
 Esta ecuaci\'on es una ecuaci\'on diferencial ordinaria de orden 1 para $q(t)$, 
@@ -64,20 +65,52 @@ cuya soluci\'on nos dar\'a la evoluci\'on temporal (desde un instante inicial
 dado) de la carga en el capacitor. 
 Para resolverla, debemos especificar adem\'as una condici\'on inicial para la 
 carga $q(t)$ en el capacitor. Dado que estamos considerando el caso en el que
-el mismo 
+el mismo se encuentra inicialmente descargado, tenemos
+\begin{equation}
+    q(t=0) = 0,
+\end{equation}
+como condici\'on inicial para el proceso de carga. 
+
+La ecuaci\'on diferencial en derivadas totales para $q(t)$ dada por
+\eqref{eq:ecuacionRC} tiene una soluci\'on general de la forma:
+\begin{equation}
+    q(t) = A \text{e}^{-t/\tau} + CV,
+\end{equation}
+donde $\tau = RC$ es el tiempo caracter\'\i stico del circuito RC, y la
+constante $A$ se determina de las condiciones del problema particular que se
+est\'e considerando. Por ejemplo, si el capacitor esta inicialmente descargado,
+resulta f\'acil obtener que $A = -CV$, por lo que
+\begin{equation*}
+    q(t) = CV \left(1 - \text{e}^{-t/\tau} \right),
+\end{equation*}
+por lo que la corriente en funci\'on del tiempo resulta
+\begin{equation*}
+    I(t) = \frac{V}{R} \text{e}^{-t/\tau}.
+\end{equation*}
+
+En base a esto, plantee c\'omo ser\'\i an las ecuaciones que describen la
+descarga del capacitor, reemplazando para ello la fuente por un cortocircuito.
+
+
+% \begin{figure}[t!]
+    % \centering
+    % \begin{tikzpicture}
+        -- Circuito RC -- % \draw[step=0.5, very thin, black!20] (-1, -0.5) grid (6, 2.5);
+        % \path (0, 0) coordinate (ref_gnd);
+        % \draw
+          % (ref_gnd) to[battery1=\(V\)] ++(0,2)
+                    % to[R=\(R\)] ++(3,0) 
+                    % to[C=\(C\)] ++(0,-2) 
+          % -- (ref_gnd);
+    % \end{tikzpicture}
+    % \vspace{0.5cm}
+    % \caption{Esquema del circuito RC empleado.}
+    % \label{fig:circuitoRC}
+% \end{figure}
 
 \begin{figure}[t!]
     \centering
-    \begin{tikzpicture}
-        % -- Circuito RC -- % \draw[step=0.5, very thin, black!20] (-1, -0.5) grid (6, 2.5);
-        \path (0, 0) coordinate (ref_gnd);
-        \draw
-          (ref_gnd) to[battery1=\(V\)] ++(0,2)
-                    to[R=\(R\)] ++(3,0) 
-                    to[C=\(C\)] ++(0,-2) 
-          -- (ref_gnd);
-    \end{tikzpicture}
-    \vspace{0.5cm}
+    \includegraphics[width=6cm]{LG05--000.png}
     \caption{Esquema del circuito RC empleado.}
     \label{fig:circuitoRC}
 \end{figure}
@@ -144,13 +177,8 @@ Repita las mediciones tomadas en el caso anterior, pero esta vez midiendo
 la diferencia de tensi\'on (o ca\'\i da de potencial) sobre el resistor. 
 Discuta las similitudes y diferencias. 
 
-\begin{sabermas} Para saber mas haria falta leer un poco las siguientes
-    referencias.  indeed up to 90\% of the energy is in wave modes for the
-    lower wavenumbers. While this results point that waves dominate the
-    largescale dynamics, it is also clear that they do not govern the smaller
-    scales.  This puts theories in which eddies are not accounted for on.
-\end{sabermas}
-
-% \bibliographystyle{unsrt} \bibliography{biblio}
+\nocite{Alonso1998,Purcell1988,Reitz1996,Trelles1984,Reitz1996}
+\bibliographystyle{unsrt} 
+\bibliography{Bibliografia}
 
 \end{document}
