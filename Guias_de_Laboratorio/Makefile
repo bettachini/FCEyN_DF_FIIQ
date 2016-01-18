@@ -62,8 +62,8 @@ G07: Guia_07_Ondas_en_una_cuerda.tex
 	latexmk -pdf -silent Guia_07_Ondas_en_una_cuerda.tex
 	make clean
 
-G08: Guia_08_Ondas_acusticas.tex
-	latexmk -pdf -silent Guia_08_Ondas_acusticas.tex
+G08: Guia_08_Ondas_Acusticas.tex
+	latexmk -pdf -silent Guia_08_Ondas_Acusticas.tex
 	make clean
 
 G09: Guia_09_Interferencia.tex
