@@ -1,0 +1,125 @@
+\documentclass[laboratorio]{guia}
+
+\def \practnum {10}
+\def \practica {Difracci\'on de la luz}
+
+\input{catedrayperiodo}
+\input{paquetes}
+\input{estilo}
+\input{hyphenation_rules}
+\graphicspath{{./Guia_10_Difraccion/}}
+
+\begin{document}
+\objetivo{
+    Medir la figura de difracci\'on de Fraunhoffer producida por una rendija y por un 
+    obst\'aculo de geometr\'\i a rectangular, empleando un fotodiodo.
+    \tematicas{Difracci\'on de Fraunhoffer, figura de difracci\'on, rendija,
+medici\'on con fotodiodo.}}
+\maketitle
+
+\section{Desarrollo de la experiencia}
+
+\subsection{Rendijas y obst\'aculos; posici\'on de los m\'\i nimos}
+
+Iluminando una rendija de ancho variable con un l\'aser de He-Ne, 
+seg\'un se muestra en la Figura~\ref{fig:1} es posible observar,
+sobre una pantalla lejana, una figura de difracci\'on.
+
+Ubique el l\'aser en la mesa \'optica asegur\'andose de que el 
+mismo quede bajo el nivel de las barreras de protecci\'on visual.
+Remueva s\'olo una de las mismas y utilice como pantalla la pared.
+Al trabajar de esta forma, ponga especial atenci\'on en no exponer
+los ojos al haz. 
+
+Una vez montado el sistema propuesto, observe c\'omo se distribuye
+la intensidad de la luz sobre la pantalla. Investigue la relaci\'on
+entre la distancia entre m\'\i nimos (y m\'aximos) de intensidad y el
+ancho $a$ de la rendija. 
+
+
+A continuaci\'on:
+\begin{itemize}
+    \item Mida la posici\'on de los m\'\i nimos $y_n^\text{min}$, donde
+        $n$ denota el orden del m\'\i nimo observado, en funci\'on de $n$.
+    \item Represente sus resultados en un gr\'afico.
+    \item Sabiendo que
+        \begin{equation}
+         y_n^\text{min} = n \frac{D \lambda}{a}, \quad n = \pm 1, \pm 2,
+         \ldots,
+        \end{equation}
+siendo $D$ la distancia entre los planos de la rendija y la pantalla, y 
+$\lambda$ la longitud de onda de la luz empleada, determine el ancho $a$
+de la rendija.
+\item Reemplace ahora la rendija por un alambre (obst\'aculo) de ancho conocido
+y estudie en igual manera su figura de difracci\'on.
+\end{itemize}
+
+El sistema rendija-obst\'aculo (cuando presentan ambos un mismo tama\~no) 
+se dicen {\it complementarios}. Una caracter\'\i stica notable
+de estos sistemas es que forman las mismas figuras de difracci\'on. Este 
+resultado se conoce como {\it principio de Babinet}.
+
+\subsection{Distribuci\'on de intensidad de las figuras de difracci\'on}
+
+El objetivo de esta parte de la pr\'actica consiste en medir la distribuci\'on
+de intensidad lum\'\i nica sobre la pantalla en la que se observan las 
+figuras de difracci\'on. Para ello, se propone montar sobre una mesa \'optica
+el mismo sistema rendija-l\'aser empleado anteriormente. Ahora, sin embargo,
+ubicaremos un fotosensor (fotodiodo) donde antes estaba ubicada la pantalla. 
+Resulta conveniente montar el fotodiodo sobre un posicionador traslacional, a
+fin de poder desplazarlo lateralmente en forma controlada.
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=8.5cm]{LG10--000.png}
+    \caption{Esquema experimental del dispositivo propuesto para el 
+    estudio de la difracci\'on de Fraunhoffer.}
+    \label{fig:1}
+\end{figure}
+
+El protocolo experimental consiste entonces en desplazar el fotosensor a lo
+largo de la figura de difracci\'on y registrar, para cada posici\'on, la
+intensidad local de la luz que a \'el llega. El registro de los datos puede
+realizarse mediante el sistema de adquisici\'on digital SensorDAQ, al cual
+se encuentra conectado el sensor. El posicionador dispone de un tornillo 
+microm\'etrico que permite medir la posici\'on del sensor sobre la figura
+de difracci\'on. 
+
+En estas condiciones:
+\begin{itemize}
+    \item Represente los resultados medidos en un gr\'afico $I(y)$, es decir,
+        de intensidad observada en funci\'on de la posici\'on $y$ del
+        fotosensor. Observe que la teor\'\i a predice un comportamiento dado
+        por
+        \begin{equation}
+            I(y) = I_0 \left(\frac{\sin z(y)}{z(y)} \right)^2,
+        \end{equation}
+        siendo 
+        \begin{equation*}
+            z = \frac{\pi a}{\lambda} \sin \alpha(y).
+        \end{equation*}
+El \'angulo $\alpha$, que es funci\'on de $y$, mide la apertura angular de la 
+figura de difracci\'on respecto del m\'aximo central, y verifica
+\begin{equation}
+    \tan \alpha(y) = \frac{y}{D},
+\end{equation}
+siendo $y$ la coodenada sobre la pantalla medida por el fotosensor. En este
+caso, recuerde que si emple\'o el fot\'ometro para medir la intensidad, el
+par\'ametro $D$ es la distancia desde el plano de la rendija hasta el elemento
+sensible del instrumento.
+\end{itemize}
+
+\subsubsection*{Observaci\'on:}
+
+El fotosensor satura a 3 V, lo que significa que cuando se lo ilumine con una
+intensidad superior a la m\'axima, la lectura que dar\'a el instrumento ser\'a
+siempre de 3 V. Dadas las caracter\'\i sticas del experimento, y siendo que 
+deseamos observar los m\'aximos de intesidad, es posible que el m\'aximo de
+orden cero resulte saturado. 
+
+
+\nocite{Alonso1998,Jenkins2001,Hecht1986}
+\bibliographystyle{unsrt} 
+\bibliography{Bibliografia}
+
+\end{document}
