@@ -6,7 +6,8 @@
 
 all: 
 	@make G01
-	@make G02
+	# @make G02 # No por ahora
+	@make G02b
 	@make G03
 	@make G04
 	@make G05
