@@ -1,0 +1,40 @@
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+% \usepackage[space]{grffile} % For spaces in paths
+% \usepackage{etoolbox} % For spaces in paths
+% \makeatletter % For spaces in paths
+% \patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+% \makeatother
+% % User Packages:
+% 
+% 
+\psscalebox{1.0 1.0} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.8828238)(6.24,1.8828238)
+\definecolor{colour0}{rgb}{0.8,0.8,0.8}
+\definecolor{colour1}{rgb}{0.6,0.6,0.6}
+\psframe[linecolor=colour0, linewidth=0.04, fillstyle=solid,fillcolor=colour0, dimen=outer](5.792308,0.5823445)(0.2723077,-0.8776555)
+\psframe[linecolor=colour1, linewidth=0.04, fillstyle=solid,fillcolor=colour1, dimen=outer](5.792308,-1.6)(0.2723077,-0.8776555)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(0.35384616,1.5777291)(1.7384615,0.60849833)
+\psline[linecolor=green, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(1.7538462,0.5623445)(2.3076923,-0.8530401)
+% \psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(2.3076923,-0.8684247)(3.6923077,-1.8376555)
+\psline[linecolor=red, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{<-}(3.1384616,1.5777291)(1.7538462,0.60849833)
+\psline[linecolor=orange, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{<-}(2.876923,0.5777291)(2.323077,-0.8376555)
+% \psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(2.9076922,0.5777291)(3.4615386,-0.8376555)
+% \psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{<-}(4.0307693,0.5931137)(3.476923,-0.8222709)
+\psline[linecolor=blue, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{<-}(4.292308,1.5777291)(2.9076922,0.60849833)
+% \psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{<-}(5.4,1.5623446)(4.0153847,0.5931137)
+\rput[red](2.7538462,1.6546522){$I_\text{rayo1}$}
+\rput[blue](4.123077,1.6854215){$I_\text{rayo2}$}
+\rput[bl](5.0,0.9469599){}
+\rput[bl](0.0,1.6854215){$I_0$}
+\rput[bl](4.7,0.8){$\text{aire}$}
+\rput[bl](4.7,-0.2){$n_r$}
+\rput[bl](4.7,-1.4){$n_l$}
+\rput[orange](2.95,-0.2){$I_{s'}$}
+\rput[green](1.75, -0.2){$I_{s}$}
+\end{pspicture}
+}
+
