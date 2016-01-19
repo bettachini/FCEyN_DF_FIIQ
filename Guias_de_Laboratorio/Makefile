@@ -11,6 +11,7 @@ all:
 	@make G03
 	@make G04
 	@make G05
+	@make G05y06
 	@make G06
 	@make G07
 	@make G08
@@ -45,43 +46,47 @@ G02b: Guia_02b_Conduccion_Liquidos.tex
 
 G03: Guia_03_Magnetismo.tex
 	latexmk -pdf -silent Guia_03_Magnetismo.tex
-	make clean
+	@make clean
 
 G04: Guia_04_Induccion.tex
 	latexmk -pdf -silent Guia_04_Induccion.tex
-	make clean
+	@make clean
 
 G05: Guia_05_Circuito_RC.tex
 	latexmk -pdf -silent Guia_05_Circuito_RC.tex
-	make clean
+	@make clean
 
 G06: Guia_06_Circuito_RLC.tex
 	latexmk -pdf -silent Guia_06_Circuito_RLC.tex
-	make clean
+	@make clean
+
+G05y06: Guia_05y06_Circuitos_RC_y_RLC.tex
+	latexmk -pdf -silent Guia_05y06_Circuitos_RC_y_RLC.tex
+	@make clean
 
 G07: Guia_07_Ondas_en_una_cuerda.tex
 	latexmk -pdf -silent Guia_07_Ondas_en_una_cuerda.tex
-	make clean
+	@make clean
 
 G08: Guia_08_Ondas_Acusticas.tex
 	latexmk -pdf -silent Guia_08_Ondas_Acusticas.tex
-	make clean
+	@make clean
 
 G09: Guia_09_Interferencia.tex
 	latexmk -pdf -silent Guia_09_Interferencia.tex
-	make clean
+	@make clean
 
 G10: Guia_10_Difraccion.tex
 	latexmk -pdf -silent Guia_10_Difraccion.tex
-	make clean
+	@make clean
 
 G11: Guia_11_Redes_de_difraccion.tex
 	latexmk -pdf -silent Guia_11_Redes_de_difraccion.tex
-	make clean
+	@make clean
 
 G12: Guia_12_Polarizacion.tex
 	latexmk -pdf -silent Guia_12_Polarizacion.tex
-	make clean
+	@make clean
 
 clean:
 	@rm -f *.log *.aux *.bbl *.blg *.idx *.toc *.out *.fdb_latexmk *.fls *.pytxcode
