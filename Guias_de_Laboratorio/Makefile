@@ -33,59 +33,59 @@ A01: Apunte_I_Diferencia_de_Fase.tex
 	@make clean
 
 G01: Guia_01_Electrostatica.tex
-	latexmk -pdf -silent Guia_01_Electrostatica.tex
+	latexmk -pdf Guia_01_Electrostatica.tex
 	@make clean
 
 G02: Guia_02_Ley_de_Ohm.tex
-	latexmk -pdf -silent Guia_02_Ley_de_Ohm.tex
+	latexmk -pdf Guia_02_Ley_de_Ohm.tex	
 	@make clean
 
 G02b: Guia_02b_Conduccion_Liquidos.tex
-	latexmk -pdf -silent Guia_02b_Conduccion_Liquidos
+	latexmk -pdf Guia_02b_Conduccion_Liquidos.tex
 	@make clean
 
 G03: Guia_03_Magnetismo.tex
-	latexmk -pdf -silent Guia_03_Magnetismo.tex
+	latexmk -pdf Guia_03_Magnetismo.tex
 	@make clean
 
 G04: Guia_04_Induccion.tex
-	latexmk -pdf -silent Guia_04_Induccion.tex
+	latexmk -pdf Guia_04_Induccion.tex
 	@make clean
 
 G05: Guia_05_Circuito_RC.tex
-	latexmk -pdf -silent Guia_05_Circuito_RC.tex
+	latexmk -pdf Guia_05_Circuito_RC.tex
 	@make clean
 
 G06: Guia_06_Circuito_RLC.tex
-	latexmk -pdf -silent Guia_06_Circuito_RLC.tex
+	latexmk -pdf Guia_06_Circuito_RLC.tex
 	@make clean
 
 G05y06: Guia_05y06_Circuitos_RC_y_RLC.tex
-	latexmk -pdf -silent Guia_05y06_Circuitos_RC_y_RLC.tex
+	latexmk -pdf Guia_05y06_Circuitos_RC_y_RLC.tex
 	@make clean
 
 G07: Guia_07_Ondas_en_una_cuerda.tex
-	latexmk -pdf -silent Guia_07_Ondas_en_una_cuerda.tex
+	latexmk -pdf Guia_07_Ondas_en_una_cuerda.tex
 	@make clean
 
 G08: Guia_08_Ondas_Acusticas.tex
-	latexmk -pdf -silent Guia_08_Ondas_Acusticas.tex
+	latexmk -pdf Guia_08_Ondas_Acusticas.tex
 	@make clean
 
 G09: Guia_09_Interferencia.tex
-	latexmk -pdf -silent Guia_09_Interferencia.tex
+	latexmk -pdf Guia_09_Interferencia.tex
 	@make clean
 
 G10: Guia_10_Difraccion.tex
-	latexmk -pdf -silent Guia_10_Difraccion.tex
+	latexmk -pdf Guia_10_Difraccion.tex
 	@make clean
 
 G11: Guia_11_Redes_de_difraccion.tex
-	latexmk -pdf -silent Guia_11_Redes_de_difraccion.tex
+	latexmk -pdf Guia_11_Redes_de_difraccion.tex
 	@make clean
 
 G12: Guia_12_Polarizacion.tex
-	latexmk -pdf -silent Guia_12_Polarizacion.tex
+	latexmk -pdf Guia_12_Polarizacion.tex
 	@make clean
 
 clean:
