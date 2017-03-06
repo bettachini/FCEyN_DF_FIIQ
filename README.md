@@ -1,2 +1,2 @@
 # Fisica_II_Q
-Mis fuentes de las guias de Fisica II para Quimicos, dictada por el Departamento de Fisica, FCEN UBA.
+Mis fuentes de las guías de la asignatura Fisica II para Quimicos, del Departamento de Física, FCEyN, UBA.
