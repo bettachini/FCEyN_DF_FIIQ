@@ -1,7 +1,8 @@
 \documentclass[laboratorio]{guia}
 
 \def \practnum {3} 
-\def \practica {Magnetost\'atica: Leyes de Amp\`ere y de Biot-Savart}
+\def \practica {Magnetost\'atica}
+% \def \practica {Magnetost\'atica: Leyes de Amp\`ere y de Biot-Savart}
 
 \input{catedrayperiodo} 
 \input{paquetes} 
@@ -12,31 +13,23 @@
 
 \begin{document} 
 \objetivo{%
-    El objetivo de esta gu\'\i a experimental consiste en determinar
-    cuantitativamente el valor y direcci\'on del campo magn\'etico terrestre
+    Determinar cuantitativamente el valor y direcci\'on del campo magn\'etico terrestre
     local (en el laboratorio) mediante dos m\'etodos experimentales diferentes.
     \tematicas{Campo magn\'etico, magnetost\'atica, ley de Amp\`ere, ley de
         Biot-Savart, sonda Hall.}} 
 \maketitle
 
-\section{Medici\'on de campos magn\'eticos usando una sonda Hall}
+\section{Sonda Hall}
 
-Las sondas (o puntas) Hall son dispositivos basados en el efecto Hall que
-permiten medir con gran precisi\'on la componente del campo magn\'etico
-perpendicular a su plano de trabajo. El voltaje Hall se mide mediante un
-volt\'\i metro. 
+Las sondas (o puntas) Hall son dispositivos basados en el efecto Hall que da cuenta de que en conductor un campo magnético \va{B} perpendicular a una corriente \(I\) que conduzca producirá una diferencia de potencial \(\Delta V\) en la dirección perpendicular a ambos.
 
-En el caso concreto de las sondas Hall disponibles en el laboratorio, su uso
-requiere conectar la sonda al puerto USB de la PC para alimentar el
-amplificador de la misma. El amplificador se utiliza para aumentar la tensi\'on
-de salida de la sonda Hall (que es del orden de los 3 mV/Gauss) a un rango
-de 0 a 4 V. 
+Las sondas disponibles en el laboratorio se conectan a un puerto USB para alimentar el amplificador de la misma.
+El amplificador se utiliza para aumentar \(\Delta V\), que es del orden de los 3 mV/Gauss, a un rango de 0 a 4 V. permitiendo medirla facilmente con un volt\'\i metro. 
 
-Conecte la sonda Hall y familiar\'\i cese con su funcionamiento y su
-operaci\'on. Consulte a su docente si tiene dudas respecto de cualquiera de
-estos dos aspectos. Una vez que comprenda c\'omo funciona la sonda, explore la
+Una vez que comprenda c\'omo funciona la sonda, explore la
 respuesta de la misma variando su orientaci\'on espacial. De esta forma,
-encuentre el plano de trabajo de la misma. 
+encuentre el plano de trabajo de la misma (?`Que indica el punto blanco?). 
+
 
 \section{Calibraci\'on de la sonda Hall}
 
@@ -62,18 +55,17 @@ sticas geom\'etricas detalladas de la bobina, y que en nuestro caso puede
 aproximarse por $\alpha \approx 0.28$ (verificar en cada caso).
 
 Con estos datos, calibre la sonda Hall utilizando como patr\'on el campo
-magn\'etico de la bobina.
+magn\'etico de la bobina a través de un gráfico \(|\vec{B}|\) vs. \(I\).
 
 
 \section{Determinaci\'on del campo magn\'etico terrestre}
 
-Una vez calibrada la sonda Hall, se proponen las siguientes dos actividades
-para determinar el campo magn\'etico terrestre:
-\begin{itemize}
+Se proponen dos alternativas para determinar el campo magn\'etico terrestre:
+\begin{enumerate}
     \item Mida el campo magn\'etico terrestre empleando la sonda Hall.
         Explore tambi\'en qu\'e ocurre cuando rota la punta en 180$^\circ$
         respecto de su eje, de modo que el campo magn\'etico atraviese la punta
-        Hall por el extremo opuesto.
+        Hall por el extremo opuesto. Compare con algún valor de referencia para Buenos Aires. Puede usar la \emph{Magnetic field calculator} \verb|http://geomag.nrcan.gc.ca/calc/mfcal-en.php|.
 
     \item Ubique una br\'ujula en el centro de la bobina empleada
         anteriormente. Con la bobina sin corriente determine la direcci\'on del
@@ -84,11 +76,11 @@ para determinar el campo magn\'etico terrestre:
         la aguja (que llamaremos $\theta$) con el campo $\vec{B}$ de la bobina. A partir de la medici\'on
         del \'angulo de desviaci\'on, y conociendo el campo generado por la
         bobina, se puede determinar el campo terrestre.
-
-    \item Grafique $B_\text{bobina}$ vs $\tan \left( \theta \right)$, empleando
+    	
+		Grafique $B_\text{bobina}$ vs $\tan \left( \theta \right)$, empleando
         para ello no menos de 6 puntos. ?`Qu\'e an\'alisis puede realizar a
         partir de esta gr\'afica?
-\end{itemize}
+\end{enumerate}
 
 \nocite{Alonso1998,Purcell1988,Reitz1996,Trelles1984}
 \bibliographystyle{unsrt} 

@@ -107,8 +107,3 @@ Bibliografia para las guias de laboratorio
 - Rodriguez Trelles, Temas de electricidad y magnetismo.
 - Reitz, Milford & Christy, Fundamentos de la teoria electromagnetica.
 - Sears, Ford & Freedman, Fisica universitaria. 
-
-
-
-
-

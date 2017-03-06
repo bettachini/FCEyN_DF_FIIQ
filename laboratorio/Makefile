@@ -2,23 +2,23 @@
 #     - Permite compilar guia a guia o bien todas las guias.
 #     - Elimina automaticamente los subproductos de la compilacion.
 #
-# Pablo Cobelli - Ultima modificacion: Enero de 2016
+# Ultima modificacion: Victor Bettachini 02/17
 
 all: 
-	@make G01
-	# @make G02 # No por ahora
-	@make G02b
-	@make G03
-	@make G04
-	@make G05
-	@make G05y06
-	@make G06
-	@make G07
-	@make G08
-	@make G09
-	@make G10
-	@make G11
-	@make G12
+	@make electrostatica
+	@make ohm # No por ahora
+	@make liquidos
+	@make magnetismo
+	@make induccion
+	@make rc
+	@make rlc
+	@make yRLC
+	@make cuerda
+	@make acusticas
+	@make interferencia
+	@make difraccion
+	@make redes
+	@make polarizacion
 	@echo " "
 	@echo "Todas las guias fueron compiladas con exito."
 	@make clean
@@ -32,60 +32,60 @@ A01: Apunte_I_Diferencia_de_Fase.tex
 	pdflatex Apunte_I_Diferencia_de_Fase.tex
 	@make clean
 
-G01: Guia_01_Electrostatica.tex
-	latexmk -pdf Guia_01_Electrostatica.tex
+electrostatica: electrostatica.tex
+	latexmk -pdf electrostatica.tex
 	@make clean
 
-G02: Guia_02_Ley_de_Ohm.tex
-	latexmk -pdf Guia_02_Ley_de_Ohm.tex	
+ohm: ohm.tex
+	latexmk -pdf ohm.tex	
 	@make clean
 
-G02b: Guia_02b_Conduccion_Liquidos.tex
-	latexmk -pdf Guia_02b_Conduccion_Liquidos.tex
+liquidos: liquidos.tex
+	latexmk -pdf liquidos.tex
 	@make clean
 
-G03: Guia_03_Magnetismo.tex
-	latexmk -pdf Guia_03_Magnetismo.tex
+magnetismo: magnetismo.tex
+	latexmk -pdf magnetismo.tex
 	@make clean
 
-G04: Guia_04_Induccion.tex
-	latexmk -pdf Guia_04_Induccion.tex
+induccion: induccion.tex
+	latexmk -pdf induccion.tex
 	@make clean
 
-G05: Guia_05_Circuito_RC.tex
-	latexmk -pdf Guia_05_Circuito_RC.tex
+rc: rc.tex
+	latexmk -pdf rc.tex
 	@make clean
 
-G06: Guia_06_Circuito_RLC.tex
-	latexmk -pdf Guia_06_Circuito_RLC.tex
+rlc: rlc.tex
+	latexmk -pdf rlc.tex
 	@make clean
 
-G05y06: Guia_05y06_Circuitos_RC_y_RLC.tex
-	latexmk -pdf Guia_05y06_Circuitos_RC_y_RLC.tex
+yRLC: y_rlc.tex
+	latexmk -pdf y_rlc.tex
 	@make clean
 
-G07: Guia_07_Ondas_en_una_cuerda.tex
-	latexmk -pdf Guia_07_Ondas_en_una_cuerda.tex
+cuerda: cuerda.tex
+	latexmk -pdf cuerda.tex
 	@make clean
 
-G08: Guia_08_Ondas_Acusticas.tex
-	latexmk -pdf Guia_08_Ondas_Acusticas.tex
+acusticas: acusticas.tex
+	latexmk -pdf acusticas.tex
 	@make clean
 
-G09: Guia_09_Interferencia.tex
-	latexmk -pdf Guia_09_Interferencia.tex
+interferencia: interferencia.tex
+	latexmk -pdf interferencia.tex
 	@make clean
 
-G10: Guia_10_Difraccion.tex
-	latexmk -pdf Guia_10_Difraccion.tex
+difraccion: difraccion.tex
+	latexmk -pdf difraccion.tex
 	@make clean
 
-G11: Guia_11_Redes_de_difraccion.tex
-	latexmk -pdf Guia_11_Redes_de_difraccion.tex
+redes: redes.tex
+	latexmk -pdf redes.tex
 	@make clean
 
-G12: Guia_12_Polarizacion.tex
-	latexmk -pdf Guia_12_Polarizacion.tex
+polarizacion: polarizacion.tex
+	latexmk -pdf polarizacion.tex
 	@make clean
 
 clean:

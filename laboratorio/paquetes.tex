@@ -1,19 +1,35 @@
-\usepackage{graphics}
-\usepackage{amsmath}
+% \usepackage{graphics}
+% \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{graphicx}
+\usepackage[arrowdel]{physics}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{subfigure}
-\usepackage{bm}
-\usepackage{grffile}
+% \usepackage{bm}
+% \usepackage{grffile}
 \usepackage{color}
-\usepackage{framed}
+% \usepackage{framed}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{circuitikz}
+% \usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+
+\usepackage[separate-uncertainty=true, multi-part-units=single, locale=FR]{siunitx}
+
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+
+% circuitikz: rotate instruments - https://tex.stackexchange.com/questions/105864/rotate-voltmeter-circuitikz
+\newcommand{\mymeter}[2] 
+{  % #1 = name , #2 = rotation angle
+\begin{scope}[transform shape,rotate=#2]
+\draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+\draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+\end{scope}
+}
+
+\usepackage{isotope} % $\isotope[A][Z]{X}\to\isotope[A-4][Z-2]{Y}+\isotope[4][2]{\alpha}$
+
 \usepackage[spanish]{babel}
 \usepackage{babelbib}
 \selectbiblanguage{spanish}
-

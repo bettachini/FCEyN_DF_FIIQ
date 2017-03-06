@@ -6,8 +6,9 @@
 \input{catedrayperiodo}
 \input{paquetes}
 \input{estilo}
+
 \input{hyphenation_rules}
-% \graphicspath{{./guia8/}}
+\graphicspath{{./Guia_11_Redes_de_difraccion/}}
 
 \begin{document}
 \objetivo{Medir el espectro de emisi\'on de una l\'ampara de sodio (Na) 
@@ -85,7 +86,18 @@ longitud de onda de la luz considerada. A mayor longitud de onda, ?`la
 desviaci\'on del haz es mayor o menor?
 
 Analice c\'omo es la distribuci\'on de los m\'aximos cuando la incidencia 
-es normal ($\theta_0 = 0$) y cuando no lo es ($\theta_0 \neq 0$). 
+es normal ($\theta_0 = 0$) y cuando no lo es ($\theta_0 \neq 0$).
+Verifique su análisis comparando con la figura \ref{fig:ordenes} 
+
+\begin{figure}
+  \centering
+  \def\svgwidth{\columnwidth}
+  \input{./Guia_11_Redes_de_difraccion/ordenes.pdf_tex}
+  \caption{Numeración de órdenes de los máximos ante incidencia no normal.}
+  \label{fig:ordenes}
+\end{figure}
+
+
 
 \section{Medici\'on del espectro de emisi\'on de una l\'ampara de sodio}
 
@@ -96,15 +108,45 @@ goni\'ometro (instrumento que se utiliza para medir \'angulos).
 Los pasos importantes a seguir en esta experiencia son:
 
 \begin{enumerate}
-    \item {\bf Calibraci\'on del goni\'ometro}. Ver detalles en el ap\'endice.
-    \item {\bf Posicionamiento de la red en el goni\'ometro.} (Ver Ap\'endice). 
+\item {\bf Calibraci\'on del goni\'ometro}. 
 
-        En la Figura 2 se muestra el dispositivo a montar. La red se coloca 
-        sobre la platina de modo que \'esta quede perpendicular al haz 
-        incidente y centrada, es decir que el haz debe incidir en forma 
-        paralela a la normal de la red ($\theta_0 = 0$). ?`Por qu\'e? Si 
-        as\'\i\ no fuera, ?`qu\'e precauci\'on debe tomar al realizar los 
-        c\'alculos?
+El goni\'ometro consta de una platina giratoria solidaria a un limbo graduado,
+sobre la cual se coloca la red. Un colimador, para crear un haz incidente de 
+rayos paralelos, y un anteojo que permite llevar el plano de observación al 
+infinito, el anteojo es móvil y posee un vernier para medir el ángulo de giro
+sobre el limbo graduado. El anteojo tiene un retículo en forma de cruz que 
+permite definir mejor las posiciones que se miden.
+
+Antes de medir, el dispositivo debe ser ajustado para trabajar bajo las 
+condiciones de difracción de Fraunhofer e incidencia normal. Para ello debe 
+enfocar el colimador y el anteojo. Primero se enfoca el anteojo mirando un 
+objeto distante (enfoque a infinito) desplazando el ocular del tubo. Luego se 
+enfoca el colimador enfrentándolo al anteojo y desplazando la rendija que se 
+halla adherida a él hasta obtener una imagen nítida de ella.
+
+A continuación se debe ubicar la red paralela al eje del goniómetro y 
+aproximadamente perpendicular al haz colimado. La red se encuentra paralela 
+al eje cuando la imagen de la rendija a través de la red se halle centrada 
+y paralela al eje vertical del retículo. Para lograr posicionarla 
+u correctamente la platina cuenta con tres tornillos de nivelación.
+
+
+\item {\bf Posicionamiento de la red en el goni\'ometro.} % (Ver Ap\'endice). 
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=8.5cm]{LG11--002.png}
+    \caption{Esquema del dispositivo. Note la ubicación de la red respecto del haz proveniente de la lámpara de Na.
+    }
+    \label{fig:1}
+\end{figure}
+
+En la Figura \ref{fig:1} se muestra el dispositivo a montar. La red se coloca 
+sobre la platina de modo que \'esta quede perpendicular al haz 
+incidente y centrada, es decir que el haz debe incidir en forma 
+paralela a la normal de la red ($\theta_0 = 0$). ?`Por qu\'e? Si 
+as\'\i\ no fuera, ?`qu\'e precauci\'on debe tomar al realizar los 
+c\'alculos?
 
         Para asegurarse incidencia normal se ubica el anteojo enfrentando al 
         colimador y se lee la posici\'on angular ($L_0$). A continuaci\'on, 
@@ -185,11 +227,16 @@ obtenidos, determine las longitudes de onda.
 
 
 
+% \section*{Ap\'endice}
+
+<<<<<<< HEAD
+=======
 
 
 
+% \section*{Ap\'endice}
 
-\section*{Ap\'endice}
+>>>>>>> ad104c7a42e80d40c124c0d895c6eb3e68874fce
 % El goni\'ometro consta de una platina giratoria solidaria a un limbo graduado,
 % sobre la cual se coloca la red. Un colimador, para crear un haz incidente de 
 % rayos paralelos, y un anteojo que permite llevar el plano de observación al 
@@ -216,15 +263,16 @@ obtenidos, determine las longitudes de onda.
 
 
         
-\begin{sabermas}
-Para saber mas haria falta leer un poco las siguientes referencias.
-indeed up to 90\% of the energy is in wave modes for the lower
-wavenumbers. While this results point that waves dominate the largescale
-dynamics, it is also clear that they do not govern the smaller scales.
-This puts theories in which eddies are not accounted for on.
-\end{sabermas}
+%\begin{sabermas}
+%Para saber mas haria falta leer un poco las siguientes referencias.
+%indeed up to 90\% of the energy is in wave modes for the lower
+%wavenumbers. While this results point that waves dominate the largescale
+%dynamics, it is also clear that they do not govern the smaller scales.
+%This puts theories in which eddies are not accounted for on.
+%\end{sabermas}
 
-% \bibliographystyle{unsrt}
-% \bibliography{biblio}
+\nocite{Alonso1998,Jenkins2001,Hecht1986}
+\bibliographystyle{unsrt}
+\bibliography{Bibliografia}
 
 \end{document}

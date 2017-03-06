@@ -1,0 +1,95 @@
+\documentclass[11pt,spanish,a4paper,twoside]{article}
+% Versión 2do cuat 2015 Víctor Bettachini < bettachini@df.uba.ar >
+
+\usepackage[spanish]{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\usepackage[utf8]{inputenc}
+
+\usepackage{float}
+
+\usepackage[separate-uncertainty=true, multi-part-units=single, locale=FR]{siunitx}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+\usepackage{enumerate}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{patterns}
+% \input{DimLinesTikz}
+
+\usepackage{graphicx}
+\graphicspath{ {./graphs/} {../}}
+\usepackage{wrapfig}
+
+\voffset-3.5cm
+\hoffset-2.5cm
+\setlength{\textwidth}{18.5cm}
+\setlength{\textheight}{27cm}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot{{\tiny \textcopyright Departamento de Física, FCEyN, UBA}}
+\fancyfoot[C]{ {\tiny Actualizado al \today} }
+\fancyfoot[RO, LE]{\tiny Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{multicol}
+
+% textsub super script
+\usepackage{changes}
+
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{Confidencial}
+% \SetWatermarkScale{5}
+
+% \usepackage[printwatermark]{xwatermark}
+% \newwatermark*[allpages,color=red!50,alpha=0.1,angle=45,scale=3,xpos=0,ypos=0]{Confidencial}
+
+%% biblatex
+\usepackage[style=verbose-note, backend=biber, sorting= none]{biblatex}
+% \usepackage[style=numeric, backend=biber, sorting= none]{biblatex}
+% \usepackage[style=numeric, autocite=footnote, backend=biber, sorting= none]{biblatex}
+\DefineBibliographyStrings{spanish}{}
+\usepackage{csquotes}
+\addbibresource{refParcial.bib}
+
+
+
+\begin{document}
+\noindent
+\textsc{\large Física 2 (Químicos)} \hfill \textsc{\large Cuestionario sobre seguridad en el laboratorio} \\
+% \textsc{\large Física 2 (Químicos)} - Prof. Diana Skigin \hfill \textsc{\large Seguridad en el laboratorio} - 2"o cuat. 2016\\
+
+% \noindent Apellido: \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots \hfill L.U. N"o: \dots\dots\dots\dots
+
+% \center \noindent \framebox{Si la hay, citá la referencia en la que se basas tu respuesta.}
+% \hline
+
+\noindent
+\begin{enumerate}
+
+\item ¿Como me manejo con el maté (termo, yerba, bizcochitos salados, etc.) en el laboratorio? % Reglas I.2 
+\vspace{3.5 cm}
+
+\item Se me cae un líquido de un experimento. ¿Le pido al pañolero un paño (¡cuac!) para secarle? % Reglas I.8
+\vspace{3.5 cm}
+
+\item En las ``Reglas básicas \ldots'' sección II bajó el título ``De incendios'' punto 7 se indica que debe evacuarse por la ruta designada. ¿Cuál es esa ruta partiendo desde donde estás ahora?
+\vspace{3.5 cm}
+
+\item Así como ``lo que mata es la humedad'', ¿que es ``lo peligroso''? ¿La ``alta tensión'' (diferencia de potencial)? ¿O una ``alta'' corriente? ¿Cuanta? % Normas, Shock eléctrico
+\vspace{3.5 cm}
+
+\item En las ``Normas de seguridad'' en su sección ``La corriente eléctrica...'' en su última subsección (``Consideraciones \ldots'') se insiste en ``Controlar la calidad de la tierra de su circuito antes de conectarlo'' ¿Que es en particular lo que tengo que ``controlar''? ¿Como me protege ``la tierra''? % Normas, Consideraciones a tener en cuenta antes de empezar a trabar en su experimento
+	
+\end{enumerate}
+\end{document}
