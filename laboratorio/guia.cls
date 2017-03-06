@@ -233,7 +233,7 @@
    {\LARGE\normalfont\itshape\ignorespaces\@headnote\par}\vskip 3.5mm
  \fi
   \noindent\ignorespaces
-  {\Large \practicaname\ \practnum \unskip : \par} \vskip 0.1cm
+  % {\Large \practicaname\ \practnum \unskip : \par} \vskip 0.1cm % Comentado por VAB : no número de práctica
    \noindent \@title \par}
    \vskip 11.24pt\relax
  \authorfont
@@ -310,7 +310,7 @@
 %
 \def\tematicas#1{\gdef\@tematicas{#1}}
 \def\@@tematicas{\par\addvspace\baselineskip\noindent{\sffamily\bfseries
-Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\par}
+Tem\'aticas abordadas: }\ignorespaces\expandafter\pacsstart\@tematicas\par}
 %
 \def\epjobjetivo#1{\gdef\@objetivo{#1}}
 %
@@ -322,7 +322,8 @@ Tem\'aticas abordadas.\enspace}\ignorespaces\expandafter\pacsstart\@tematicas\pa
     \if!\the\titlerunning!\else
       \edef\@title{\the\titlerunning}%
     \fi
-    \global\setbox\titrun=\hbox{\small\rm\ignorespaces Pr\'actica \practnum : \@title}%
+    \global\setbox\titrun=\hbox{\small\rm\ignorespaces \materia \, - \@title}% % Comentado por VAB : no número de práctica
+    % \global\setbox\titrun=\hbox{\small\rm\ignorespaces Pr\'actica \practnum : \@title}% % Comentado por VAB : sin número de práctica
     \ifdim\wd\titrun>\instindent
        \global\setbox\titrun=\hbox{\small\rm%
        \ignorespaces Pr\'actica \practnum : \practcor}%
@@ -785,8 +786,11 @@ to\/}: \ignorespaces#1}}\endgroup\ignorespaces}
 \fi
 \hbox to0pt{\vbox{\baselineskip=10dd\hrule\hbox
 to\hsize{\vrule\kern3pt\vbox{\kern3pt
-\hbox{\bfseries\@journalname\ }
-\hbox to 504pt{C\'atedra \catedra\ - \periodo\  \hfil {\tt \website} }
+\hbox to 504pt{\bfseries\@journalname\ \hfil {\tt \textcopyright Departamento de F\'{\i}sica, FCEyN, UBA} }
+% \hbox{\bfseries\@journalname\ }
+% \hbox to 504pt{\periodo\  \hfil {\tt \textcopyright Departamento de Física, FCEyN, UBA} }	% que no figure el período
+% \hbox to 504pt{\periodo\  \hfil {\tt \website} }	% que no figure el período
+% \hbox to 504pt{\profesor\ - \periodo\  \hfil {\tt \website} }
 % Los 504pt = 180mm - (3pt + 3pt) de kern de la linea siguiente
 \kern3pt}\hfil\kern3pt\vrule}\hrule}%
 \hss}}}
@@ -1424,7 +1428,8 @@ to\hsize{\vrule\kern3pt\vbox{\kern3pt
 \newcommand\tablename{Tabla}
 \newcommand\partname{Parte}
 \newcommand\appendixname{Apendice}
-\newcommand\objetivoname{Objetivo\runinend}
+\newcommand\objetivoname{Objetivo:}
+% \newcommand\objetivoname{Objetivo\runinend}
 \newcommand\practicaname{Pr\'actica}
 \newcommand\ackname{Acknowledgements\runinend}
 \newcommand\noteaddname{Note added in proof}
