@@ -1,0 +1,225 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 2.o cuat 2015 Víctor Bettachini < bettachini@df.uba.ar >
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\usepackage{units}
+\usepackage[separate-uncertainty=true, multi-part-units=single, locale=FR]{siunitx}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+% \usepackage{tikz}
+% \input{DimLinesTikz}
+% \usetikzlibrary{decorations.pathmorphing, patterns}
+
+\usepackage{graphicx}
+\graphicspath{{./graphs/}}
+\usepackage{wrapfig}
+
+
+\usepackage[margin=1.3cm,nohead]{geometry}
+% \voffset-3.5cm
+% \hoffset-3cm
+% \setlength{\textwidth}{17.5cm}
+% \setlength{\textheight}{27cm}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot{{\tiny \textcopyright Departamento de Física, FCEyN, UBA}}
+\fancyfoot[C]{ {\tiny Actualizado al \today} }
+\fancyfoot[RO, LE]{Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% lista multicolumna
+\usepackage{multicol}
+
+% textsubscript
+\usepackage{changes}
+
+
+% \include{materiaPeriodo}
+
+\begin{document}
+\noindent
+\textbf{Física II (Químicos)}\hfill \textcopyright {\tt DF, FCEyN, UBA}
+% \textbf{\materia}\hfill \periodo
+\begin{center}
+  \textsc{\large Difracción}
+  % \textsc{\large Guía 9: Difracción}
+\par\end{center}{\large \par}
+
+
+\begin{enumerate}
+
+\section*{Rendija única}
+
+\item
+\begin{minipage}[t]{0.55\textwidth}
+El sistema óptico de la figura está compuesto por dos lentes convergentes y una apertura rectangular muy larga de ancho \(a\).
+Dé una expresión para la distribución de luz en el plano focal de \(L_2\) y, teniéndola en cuenta, diga dónde está ubicado el pico del máximo principal de difracción en los casos:
+\begin{enumerate}
+	\item fuente en \(f_1\),
+	\item fuente en P.
+\end{enumerate}
+\end{minipage}
+\begin{minipage}[c][1em][t]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{g09e01}
+\end{minipage}
+
+Halle la ubicación de la imagen geométrica de una fuente en \(f_1\) y de otra en \(P\).
+¿Qué relación tiene la ubicación de dichas imágenes con la de los máximos hallados en a)?
+
+
+
+%%%%% Hasta acá
+
+
+\item
+Considere la figura de difracción de Fraunhofer producida por una rendija de ancho \(a\) y largo \(b\) (\(b \gg  a\)) ubicada entre dos lentes convergentes y centrada en el eje óptico del sistema.
+La fuente puntual monocromática de longitud de onda \(\lambda\) se coloca en el foco objeto de la primera lente.
+\begin{enumerate}
+	\item ¿Dónde se coloca la pantalla de observación para observar difracción de Fraunhofer?
+	\item Calcule la posición de los máximos y de los mínimos de intensidad, el ancho angular de la campana principal de difracción y de los máximos secundarios.
+	\item Calcule la relación de intensidades entre el máximo principal y el primer máximo secundario.
+	\item Grafique la intensidad sobre la pantalla. ¿En función de qué variables lo hace? ¿Podría haber elegido otras? ¿Cuáles?
+	\item Discuta cómo se modifican los parámetros de la figura de difracción si se cambia:
+	\begin{enumerate}
+		\item el ancho de la ranura.
+		\item la longitud de onda.
+		\item la fuente monocromática por una policromática.
+	\end{enumerate}
+	\item Resuelva todo el problema nuevamente si la fuente se encuentra en el plano focal objeto de la primera lente a una altura h del eje óptico.
+\end{enumerate}
+
+
+\item
+Una rendija de ancho \(a = \SI{0.25}{\milli\metre}\) y largo \(b \gg a\) está colocada delante de una lente convergente.
+richa rendija está iluminada por ondas planas que inciden sobre ella, siendo \(\lambda= \SI{500}{\nano\metre}\).
+En el plano focal imagen de la lente se observa una figura de difracción.
+La distancia entre el primer mínimo a la izquierda del máximo principal y el tercer mínimo a su derecha es \SI{3}{\milli\metre}.
+Además, el primer mínimo a la izquierda está ubicado \SI{3}{\milli\metre} a la derecha del eje óptico.
+\begin{enumerate}
+	\item ¿Cuánto vale la distancia focal de la lente usada?
+	\item ¿Dónde el máximo principal? ¿Dónde se encuentra la fuente?
+\end{enumerate}
+
+
+\section*{Doble rendija}
+
+
+\item
+Se tienen dos rendijas iguales de ancho \(a\), cuya separación entre centros es \(d\), colocadas entre dos lentes delgadas convergentes, ubicadas en forma simétrica respecto del eje óptico del sistema.
+Una fuente puntual monocromática se encuentra en el foco de la primera lente.
+Considere la figura de interferencia-difracción de Fraunhofer de la fuente.
+\begin{enumerate}
+	\item Calcule la posición de los máximos y mínimos tanto de interferencia como de difracción.
+	\item Grafique la intensidad sobre la pantalla. ¿En función de qué variable lo hace? ¿Qué otra variable podría haber usado?
+	\item ¿Cuántos órdenes de interferencia hay dentro de la campana principal de difracción?
+	\item ¿Por qué motivo cuando se estudia el experimento de Young de interferencia no se tiene en cuenta el efecto de difracción en cada ranura?
+\end{enumerate}
+
+
+\item
+Se realiza una experiencia de difracción por doble rendija con una fuente que emite en \SI{400}{\nano\metre}.
+La separación entre los puntos medios de las rendijas es de \SI{0,4}{\milli\metre} y el ancho de cada una de ellas es de \SI{0,04}{\milli\metre}.
+La pantalla está a \SI{1}{\metre} de las rendijas.
+Si se cambia la fuente por otra que emite en \SI{600}{\nano\metre}, determine:
+\begin{enumerate}
+	\item en cuánto varió la interfranja,
+	\item en cuánto varió el número total de franjas de interferencia contenidas en el máximo principal de difracción,
+	\item y en cuánto varió el ancho angular de la campana principal de difracción.
+\end{enumerate}
+
+
+\item
+Sobre dos ranuras de Young separadas una distancia de \SI{1}{\milli\metre} incide la superposición de dos ondas planas monocromáticas de longitudes de onda \(\lambda_1\) y \(\lambda_2\).
+\begin{enumerate}
+	\item ¿Qué relación debe satisfacer el cociente \(\frac{\lambda_1}{\lambda_2}\) para que el tercer orden de interferencia constructiva de \(\lambda_1\) coincida con el tercer mínimo de \(\lambda_2\)? 
+	\item ¿Qué ancho deben tener las ranuras para que además esos órdenes coincidan con el primer mínimo de difracción de \(\lambda_1\)?
+	\item ¿Qué intensidad se registrará en la pantalla en ese punto?
+\end{enumerate}
+
+
+
+\section*{N rendijas}
+
+
+\item 
+% \item \textbf{N rendijas de ancho conocido}
+Una onda plana monocromática de longitud de onda \(\lambda\) incide normalmente sobre una red de transmisión plana formada por \(N\) rendijas de ancho \(a\) y de período \(d\) (\(a \ll d\)).
+Suponga que la teoría escalar corresponde a una descripción exacta del fenómeno.
+\begin{enumerate}
+\item Se coloca una pantalla de observación de modo de observar difracción de Fraunhofer.
+	Analice la distribución de intensidad sobre la pantalla y grafíquela.
+\item Calcule la posición angular de las líneas espectrales y su intensidad.
+	¿Las líneas espectrales corresponden a los máximos de interferencia o de difracción?
+	Calcule la separación angular entre dos líneas consecutivas.
+\item ¿Cuántos mínimos de interferencia hay entre dos líneas espectrales consecutivas?
+	¿Cuántos máximos secundarios hay entre dichas líneas?
+\item Calcule el ancho angular de las líneas espectrales.
+\item Si la incidencia sobre la red no es normal, ¿cómo cambia la figura de interferencia-difracción?
+\end{enumerate}
+
+
+
+\item 
+Se incide con un haz de luz monocromático de longitud de onda \(\lambda= \SI{589}{\nano\metre}\) de forma tal que se observa el siguiente patrón de difracción sobre una pantalla ubicada a \SI{150}{\centi\metre} de una red de rendijas.
+Determine:
+\begin{enumerate}
+	\item el número de rendijas que tiene la red,
+	\item la distancia entre rendijas,
+	\item y el ancho de cada rendija.
+\end{enumerate}
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{g09e11}
+\end{center}
+
+
+\section*{Redes de difracción}
+
+\item 
+% \item \textbf{N fuentes puntuales}
+Se tienen \(N\) fuentes puntuales monocromáticas de longitud de onda \(\lambda\) alineadas y separadas entre sí una distancia \(d\).
+Se coloca una pantalla a una distancia \(L\) (\(L \gg d\)).
+\begin{enumerate}
+	\item Determine la intensidad luminosa sobre la pantalla en función de la coordenada \(y\).
+	\item Determine la separación entre los máximos principales.
+	\item ¿Cuántos máximos secundarios aparecen entre los máximos principales? ¿Cuántos mínimos?
+	\item ¿Qué sucede al variar la cantidad de ranuras o la separación de las mismas?
+	\item Si las fuentes emiten en dos longitudes de onda (\(\lambda\) y \(\lambda'\)), ¿en qué condiciones quedan nítidamente separados sus respectivos máximos?
+\end{enumerate}
+
+
+\item
+Se dispone de dos redes de difracción por transmisión cuadradas de \SI{2}{\centi\metre} de lado, una tiene \num{600} líneas/\si{\milli\metre} y la otra 1200 líneas/\si{\milli\metre}.
+Calcule:
+\begin{enumerate}
+	\item el poder resolvente de cada red en el primer orden,
+	\item el máximo orden observable si la fuente emite en \SI{500}{\nano\metre}.
+	\item ¿Es importante tener en cuenta el ángulo de incidencia?
+	Considere primero que la luz incide normalmente a la red y luego repita el cálculo para el caso en que la incidencia es rasante.
+	\item Calcule el máximo poder resolvente de cada una.
+	\item Determine si alguna de ellas resuelve entre las longitudes de onda \(\lambda_1= \SI{500}{\nano\metre}\) y \(\lambda_2= \SI{500,007}{\nano\metre}\).
+\end{enumerate}
+
+
+\item
+Luz de longitudes de onda \(\lambda_1= \SI{500}{\nano\metre}\) y \(\lambda_2= \SI{520}{\nano\metre}\) incide normalmente sobre una red de difracción de rendijas.
+La distancia entre rendijas es de \SI{1}{\micro\metre} y se emplea una lente convergente de distancia focal de \SI{2}{\metre} para focalizar el espectro sobre una pantalla.
+Calcule aproximadamente la separación lineal sobre la pantalla entre las líneas espectrales de primer orden de \(\lambda_1\) y \(\lambda_2\).
+
+
+
+
+\end{enumerate}
+\end{document}

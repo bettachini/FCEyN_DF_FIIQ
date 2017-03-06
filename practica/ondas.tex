@@ -1,0 +1,203 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 2.o cuat 2015 Víctor Bettachini < bettachini@df.uba.ar >
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\usepackage{units}
+\usepackage[separate-uncertainty=true, multi-part-units=single, locale=FR]{siunitx}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+% \usepackage{tikz}
+% \input{DimLinesTikz}
+% \usetikzlibrary{decorations.pathmorphing, patterns}
+
+\usepackage{graphicx}
+\graphicspath{{./graphs/}}
+
+\usepackage[margin=1.3cm,nohead]{geometry}
+% \voffset-3.5cm
+% \hoffset-3cm
+% \setlength{\textwidth}{17.5cm}
+% \setlength{\textheight}{27cm}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot{{\tiny \textcopyright Departamento de Física, FCEyN, UBA}}
+\fancyfoot[C]{ {\tiny Actualizado al \today} }
+\fancyfoot[RO, LE]{Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% lista multicolumna
+\usepackage{multicol}
+
+% textsubscript
+\usepackage{changes}
+
+% \include{materiaPeriodo}
+
+\begin{document}
+\noindent
+\textbf{Física II (Químicos)}\hfill \textcopyright {\tt DF, FCEyN, UBA}
+% \textbf{\materia}\hfill \periodo
+\begin{center}
+  \textsc{\large Guía 7: Ondas unidimensionales - Viajeras y estacionarias - En gases: sonido}
+\par\end{center}{\large \par}
+
+
+\begin{enumerate}
+
+\section*{Viajeras y estacionarias}
+
+%\item Determinar cuáles de las siguientes expresiones matemáticas pueden representar ondas viajeras unidimensionales, físicamente razonables.
+%	\begin{multicols}{2}
+%	\begin{enumerate}
+%		\item \( \varphi(x,t)= A \mathrm{e}^{- \alpha (x- c t) } \)
+%		\item \( \varphi(x,t)= A \mathrm{e}^{- 2 \alpha (x- c t) } \)
+%		\item \( \varphi(x,t)= A \ln \left( k (x- c t) \right) \)
+%		\item \( \varphi(x,t)= A \left( x- c t \right) \)
+%		\item \( \varphi(x,t)= A \left( x- c t \right)^n \)
+%		\item \( \varphi(x,t)= A \sin \left( k (x- c t) \right) \)
+%		\item \( \varphi(x,t)= A \sin \left( \alpha (x^2- c^2 t^2) \right) \)
+%		\item \( \varphi(x,t)= A \left( x+ c t \right)^{1/2} \)
+%	\end{enumerate}
+%	\end{multicols}
+
+
+\item
+Sean dos ondas que se superponen entre sí:
+	\[
+	\psi_1(x,t)= A_1 \sin \left( \omega t - k x + \varphi_1 \right) \qquad \mathrm{y} \qquad \psi_1(x,t)= A_2 \sin \left( \omega t - k x + \varphi_2 \right), 
+	\]
+en las que \( \epsilon_1 \) y \( \epsilon_2 \) son independientes del tiempo.
+    \begin{enumerate}
+        \item Determine la perturbación resultante.
+		\item Hágalo en particular para los siguientes valores de los parámetros: \( \omega=\SI{120}{\per\second}, A_1=\SI{6}{\milli\metre}, A_2=\SI{8}{\milli\metre}, \varphi_1= 0, \varphi_2= \pi/2, \lambda= \SI{2}{\centi\metre}\).
+		\item Grafique cada función de onda y la resultante en función de la posición \(x\) (para \(t=0\)) y en función del tiempo \(t\) (para \(x=0\)).
+		\item Si \(A_1= A_2= A\) y se observa que la superposición de \(\psi_1\) y \(\psi_2\) es una onda de amplitud \(A\). ¿Cuanto es la diferencia de fase, \(\varphi_2 - \varphi_1\)?
+    \end{enumerate}
+
+
+\item Encuentre la resultante de superposición de las siguientes dos ondas,
+	\[
+		\psi_1(x,t)= A \cos \left( k x + \omega t \right) \qquad \mathrm{y} \qquad \psi_2(x,t)= A \cos \left( k x - \omega t \right), 
+	\]
+	Describa y grafique la onda resultante.
+	¿Se obtiene una onda viajera?
+
+
+\item Sea una onda transversal descripta por:
+	\[
+	\psi(x,t)= \SI{4}{\milli\metre} \cos \left[ 2 \pi  \left( \frac{t}{\SI{0.05}{\second}} - \frac{x}{\SI{0.25}{\centi\metre}} \right) \right].
+	\]
+    \begin{enumerate}
+        \item Determine su velocidad de propagación, frecuencia, longitud de onda, número de onda y fase inicial.
+		\item Considere una partícula del medio en que se transmite la onda ubicada en \(x= 0\) y otra en \(x= \SI{10}{\centi\metre}\). En el instante \(t= 0\), ¿cuál es la diferencia entre las velocidades de oscilación transversal de ambas partículas?
+		¿Cuál es la diferencia entre las fases de los movimientos oscilatorios de dichas partículas?
+    \end{enumerate}
+
+
+\item Una cuerda oscila transversalmente de modo que la perturbación está dada por:
+	\[
+	\psi(x,t)= \SI{0.5}{\centi\metre} \sin \left( \SI{1.26}{\per\centi\metre} x - \SI{12.57}{\per\second} t + \varphi_0 \right) 
+	\]
+	Se sabe que en el punto \(x= \SI{1.5}{\metre}\) y en el instante \(t= \SI{0.4}{\second}\), la cuerda tiene velocidad negativa y desplazamiento nulo.
+	Calcule:
+    \begin{enumerate}
+		\item la frecuencia de la oscilación,
+		\item la longitud de onda,
+		\item y la fase inicial \(\varphi_0\).
+    \end{enumerate}
+
+
+\section*{En medios materiales}
+
+\item El extremo de un tubo delgado de goma está fijo a un soporte.
+	El otro extremo pasa por una polea situada a \SI{5}{\metre} del extremo fijo y se cuelga de dicho extremo una carga de \SI{2}{\kilo\gram}.
+	La masa del tubo entre el extremo fijo y la polea es \SI{0.6}{\kilo\gram}.
+	Una onda armónica transversal de \SI{1}{\milli\metre} de amplitud y longitud de onda \SI{30}{\centi\metre} se propaga a lo largo del tubo.
+    \begin{enumerate}
+		\item Calcule la velocidad de propagación de dicha onda.
+		\item Escriba la ecuación que describe la onda.
+		\item Calcule la velocidad transversal máxima.
+    \end{enumerate}
+
+
+\item Sea una cuerda de densidad lineal de masa \SI{0.2}{\kilo\gram\per\metre} y longitud \SI{80}{\centi\metre} sometida a una tensión de \SI{80}{\newton}.
+    \begin{enumerate}
+	\item Calcule la velocidad con que se propagan ondas en esta cuerda.
+	\item Un extremo de la cuerda se sujeta a un soporte ideal (o sea un soporte tal que la onda incidente en él se refleja totalmente) y el otro extremo se mueve de modo de generar una onda armónica \(\psi_1 \) que se propaga por la cuerda. 
+	Escriba la expresión para las ondas estacionarias que resultan.
+	Considere \(\psi_1(x,t)= A \cos \left( k x + \omega t + \frac{\pi}{2} \right) \).
+	\item Ambos extremos se sujetan a soportes ideales y se deforma la cuerda de modo de generar ondas estacionarias.
+	Encuentre la frecuencia y longitud de onda fundamental y las armónicas.
+	Dibuje los primeros tres modos de oscilación de la cuerda.
+	\item En las mismas condiciones del punto anterior la cuerda está inicialmente deformada adoptando la forma de su tercer modo normal y con una amplitud de \SI{4.5}{\milli\metre}.
+	Calcule la frecuencia de la oscilación y el valor máximo de la velocidad transversal de la cuerda.
+	\end{enumerate}
+
+
+
+\section*{En gases: sonido}
+
+\item La ecuación de una onda de presión en una columna de gas es:
+	\[
+		\delta P= A_p \sin{2 \pi \left( \frac{x }{\lambda }- \frac{t }{\tau } \right) }
+	\]
+	donde \(\delta P\) es la presión medida respecto a la presión del equilibrio.
+    \begin{enumerate}
+		\item Halle la expresión para las ondas de desplazamiento.
+		\item Muestre que las ondas de desplazamiento están desfasadas en \(\pi/2\) respecto de las ondas de presión.
+    \end{enumerate}
+
+
+
+\item En un tubo cilíndrico cerrado de diámetro \SI{5}{\centi\metre} que contiene aire (\(\rho_a = \SI{1.2}{\kilo\gram\per\metre\cubed}\); \(v_a = \SI{330}{\metre\per\second}\)) la distancia entre dos nodos consecutivos de una onda acústica estacionaria producida en ambos extremos es de \SI{20}{\centi\metre}.
+	Determine:
+    \begin{enumerate}
+		\item la frecuencia de la onda sonora,
+		\item la amplitud máxima de la onda de presión si la amplitud máxima de la onda de desplazamiento es de \SI{10}{\micro\metre},
+		\item y la potencia de la onda sonora (\(\mathrm{Pot}= S v \delta p \), \(S\) la sección, \(v\) la velocidad de propagación, y \(\delta p\) la presión por sobre la atmosférica).
+	\end{enumerate}
+
+
+\item Explique por qué se oye la vibración de un diapasón.
+	¿Cuánto valen las frecuencias límites que estimulan al oído humano?
+	¿Por qué es conveniente adosar el diapasón a una caja de resonancia?
+
+
+\item \begin{enumerate}
+		\item Una cuerda de violín de \SI{30}{\centi\metre} de longitud emite la nota La\textsubscript{3} (\SI{440}{\per\second}) en su modo fundamental.
+		Calcule las modificaciones que deben realizarse en la longitud para que dé las notas Si\textsubscript{3} (\SI{495}{\per\second}) , Do\textsubscript{3} (\SI{528}{\per\second}) y Re\textsubscript{3} (\SI{594}{\per\second}), todas en su modo fundamental.
+		\item Para una dada cuerda (o sea si su longitud, densidad lineal y tensión son fijas), ¿el sonido emitido es de una única frecuencia o es la superposición de armónicos?
+		En caso que sea la superposición, ¿a cuál de las frecuencias armónicas corresponde el tono del sonido? 
+	\end{enumerate}
+
+
+\item \begin{enumerate}
+    	\item \label{13a} ¿Cuánto vale la menor longitud que puede tener un tubo de órgano abierto en ambos extremos para que produzca en el aire un sonido de \SI{440}{\hertz}?
+		\item Para producir el mismo tono que el primer armónico de este tubo, ¿qué longitud debería tener un tubo cerrado?
+		\item Y para producir la misma nota que su fundamental, ¿qué tensión debierá aplicarse a la cuerda de un violín que tiene \SI{50}{\centi\metre} de longitud y una masa de \SI{2}{g}?
+		\item Para esta cuerda calcule la longitud de onda de la oscilación, 
+		\item y la del sonido producido.
+	\end{enumerate}
+
+\item El nivel de agua en una probeta de \SI{1}{\metre} de longitud puede ser ajustado a voluntad.
+	Se coloca un diapasón sobre el extremo abierto del tubo.
+	El mismo oscila en una frecuencia de \SI{600}{\hertz}.
+	¿Para qué niveles de agua habrá resonancia?
+
+
+
+\end{enumerate}
+\end{document}

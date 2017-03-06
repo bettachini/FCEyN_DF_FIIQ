@@ -1,0 +1,235 @@
+\documentclass[11pt,spanish,a4paper,twoside]{article}
+% Versión 2.o cuat 2015 Víctor Bettachini < bettachini@df.uba.ar >
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+% \usepackage{units}
+\usepackage[separate-uncertainty=true, multi-part-units=single, locale=FR]{siunitx}
+\DeclareSIUnit\celcius{C}
+
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+% \usepackage{tikz}
+% \input{DimLinesTikz}
+% \usetikzlibrary{decorations.pathmorphing, patterns}
+
+\usepackage[pdftex]{graphicx}
+\graphicspath{{./graphs/}}
+\usepackage{wrapfig}
+
+\usepackage{color}
+\definecolor{DarkBlue}{rgb}{0,0,0.2}
+\usepackage[colorlinks=true,urlcolor=DarkBlue]{hyperref}
+
+\usepackage[margin=1.3cm,nohead]{geometry}
+% \voffset-3.5cm
+% \hoffset-3cm
+% \setlength{\textwidth}{17.5cm}
+% \setlength{\textheight}{27cm}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot{{\tiny \textcopyright Departamento de Física, FCEyN, UBA}}
+\fancyfoot[C]{ {\tiny Actualizado al \today} }
+\fancyfoot[RO, LE]{Pág. \thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% lista multicolumna
+\usepackage{multicol}
+
+% textsubscript
+\usepackage{changes}
+
+
+% \include{materiaPeriodo}
+
+\begin{document}
+\noindent
+\textbf{Física II (Químicos)}\hfill \textcopyright {\tt DF, FCEyN, UBA}
+% \textbf{\materia}\hfill \periodo
+\begin{center}
+  \textsc{\large Polarización}
+  % \textsc{\large Guía 10: Polarización}
+\par\end{center}{\large \par}
+
+%Idea que busco que practiquen esta secuencia:
+%\begin{enumerate}
+%  \item Descripción matemática de estado general \(\hat{E}(z,t)= \left(E_{0x} \mathrm{e}^{\mathrm{i} \phi_y} \hat{x}+ E_{0y} \mathrm{e}^{\mathrm{i} \phi_y} \right) \cos{kz - wt} \).
+%  \item Caso particular: lineal \( \phi_y - \phi_x= m \pi, m \in \mathbb{Z}_0\).
+%  \item Caso particular: circular \(E_{0x}= E_{0y}, \phi_y - \phi_x= \pm\frac{\pi}{2}+ m 2 \pi, m \in \mathbb{Z}_0\), \(+\) circular izquierda, \(-\) circular derecha.
+%  \item Lineal como superposición de circular izquierda y derecha. Visceversa.
+%  \item Concentración de molécula quíral medida con un polarímetro (analizador de dos polaroids)
+%\end{enumerate}
+%
+%Opcionales:
+%\begin{enumerate}
+%  \item Dicroísmo circular: distinta absorción circular izquierda y derecha. Espectrofotómetro registra diferencia de absorción en ejes elíptica \(\rightarrow\) absorbidad molar.
+%  \item Determinación índice de refracción de una solución por determinación de ángulo de Brewster. Se varía ángulo de incidencia hasta obtener solo linealmente polarizada en la reflexión.
+%  \item Lámina de \(\lambda/4\): dispositivo para generar circular de lineal y visceversa.
+%\end{enumerate}
+
+
+
+\begin{enumerate}
+\section*{Descripción matemática del estado de polarización}
+
+\subsection*{Caso general: elíptica}
+
+\item
+Escriba la expresión de una onda plana, elípticamente polarizada en sentido antihorario.
+La onda se propaga según el eje \(\hat{x}\) positivo (use terna directa).
+
+
+\subsection*{Casos particulares: circular - lineal}
+\item
+Escriba, indicando claramente el sistema de coordenadas empleado, la expresión matemática de una onda transversal que se propaga según el eje \(\hat{x}\):
+\begin{enumerate}
+  \item elípticamente polarizada, tal que el eje mayor, que es igual a dos veces el eje menor, está sobre el eje \(\hat{y}\),
+  \item polarizada linealmente tal que su eje de polarización forma un ángulo de \SI{30}{\degree} con el eje \(\hat{y}\),
+  \item polarizada circularmente en sentido horario,
+  \item polarizada circularmente en sentido antihorario.
+\end{enumerate}
+
+
+
+\subsection*{Construcción de un estado de polarización como suma de otros}
+%\subsection*{Polarización lineal como combinación de circular levógira y dextrógira}
+
+\item
+Indique cuándo dos ondas transversales y vectoriales, perpendiculares entre sí dan una onda:
+\begin{enumerate}
+  \item linealmente polarizada,
+  \item circularmente polarizada en sentido antihorario,
+  \item circularmente polarizada en sentido horario,
+  \item y elípticamente polarizada en sentido antihorario.
+\end{enumerate}
+
+
+\section*{Dispositivos}
+
+
+\subsection*{Película polarizadora (\emph{Polaroid}) - Malus}
+
+\item
+Sobre una lámina \emph{polaroid} incide una onda circularmente polarizada en sentido horario.
+¿Cuál es el estado de polarización de la onda transmitida?
+¿Qué fracción de la intensidad incidente se transmitió a través de la lámina?
+Justifique.
+
+
+\item
+Sobre una lámina polarizadora ideal (\emph{polaroid}) incide una onda cuyo estado de polarización no se conoce, con una intensidad \(I_0\).
+Se hace girar esa lámina y se observa que la intensidad transmitida es \(I_0/2\) y no depende del ángulo de giro.
+¿Qué puede decir sobre el estado de polarización de la onda incidente?
+Justifique.
+
+\item
+A través de dos películas polarizadoras se hace incidir un haz de luz natural sobre el mismo.
+Se transmite una intensidad igual a la cuarta parte de la que tenía la luz incidente.
+¿Cuál es el ángulo formado por los ejes de transmisión de la película polarizadora y la analizadora?
+
+
+\item
+Un polarizador y un analizador están orientados de manera que se transmite la máxima cantidad de luz.
+Determine a qué fracción de este valor se reduce la intensidad de luz transmitida cuando se gira el analizador en 20, 45 y \SI{60}{\degree}.
+
+
+
+\subsection*{Polarímetro}
+% http://www.chem.ucla.edu/harding/tutorials/stereochem/calcs.html
+
+\item
+El alcanfor (1,7,7-Trimethylbicyclo[2.2.1]heptan-2-ona) tiene una rotación específica de \SI{+44,26}{\degree\cubic\centi\metre\per\deci\metre\per\gram}.
+Si se dispone de un polarímetro con una celda de \SI{15}{\deci\litre} con una longitud de \SI{10}{cm}.
+¿Cuantos gramos de alcanfor se necesitan para producir una rotación de \SI{2,07}{\degree}?
+\textit{Rta. \SI{7,02}{\gram}.}
+
+\item
+La intensidad de luz que atraviesa dos polarizadores perfectos con sus ejes perpendiculares el uno del otro es obviamente nula.
+Luego entre ambos polarizadores se ubica un contenedor a través del cual la luz recorre \SI{10,6}{\centi\metre} de una solución en H\textsubscript{2}O de sacarosa (\(\mathrm{\alpha}\)-D-Glucopiranosil-(1\(\rightarrow\)2)-\(\mathrm{\beta}\)-D-Fructofuranósido), cuya rotación específica es de \SI{+66,37}{\degree\cubic\centi\metre\per\deci\metre\per\gram}.
+Se registra ahora una intensidad de la luz a la salida de aproximadamente un \SI{2,0}{\percent} de la original.
+¿Cuál es la molaridad de la solución? 
+La masa molecular de la sacarosa es \SI{342,3}{\gram\per\mole}).
+\textit{Rta. \num{0,48} molar.}
+
+
+
+\section*{Polarización por reflexión - ángulo de Brewster}
+
+\item
+Incide un haz de luz linealmente polarizada sobre la superficie de separación de dos medios transparentes.
+¿Qué condiciones deben cumplirse para que ese haz se transmita totalmente hacia el segundo medio?
+
+
+\item
+Con una fuente de luz linealmente polarizada convenientemente alineada con la interfaz de un líquido basta con determinar el ángulo de Breswter, es decir aquel en que no se produzca reflexión, para identificar el mencionado líquido.
+Cuatro botellones tenían contenidos desconocidos.
+Usando una fuente de Na cuyo doblete está centrado en \(\lambda= \SI{589.29}{\nano\metre}\) (amarillo) se logró a \SI{20}{\celcius} la condición de Brewster a un ángulo de incidencia de \num{56.327}; \num{57.765}; \num{53.032} y \SI{53.685}{\degree} respectivamente para cada botellón.
+¿Que contenía cada uno?
+
+Índices de refracción para el doblete del Na a \SI{20}{\celcius} : aire \num{1.000293}; alcohol metílico (CH\textsubscript{3}OH) \num{1.329}; alcohol etílico (C\textsubscript{2}H\textsubscript{6}O) \num{1.361}; ácido acético (C\textsubscript{2}H\textsubscript{4}O\textsubscript{2}) \num{1.3719}; glicol (HOCH\textsubscript{2}CH\textsubscript{2}OH) \num{1.4274}; glicerol (HOCH(CH\textsubscript{2}OH)\textsubscript{2}) \num{1.4729}; benceno (C\textsubscript{6}H\textsubscript{6}) \num{1.5014}; anilina (C\textsubscript{6}H\textsubscript{7}N) \num{1.5863} 
+% benceno, anilina, alcohol metílico, alcohol etílico
+% https://en.wikipedia.org/wiki/List_of_refractive_indices#cite_note-ref1-1
+% http://www.refractometer.pl/refraction-datasheet-basic
+
+
+\item
+El índice de refracción de la miel depende de su contenido de H\textsubscript{2}O según \(n_{\mathrm{miel}}= 1,537- \SI{2,5E-3}{\percent}\mathrm{H\textsubscript{2}O}\) expresada esta concentración peso/peso.
+¿Cual es esta concentración si se verifica la condición de Brewtser para \SI{56.063}{\degree} en la interfaz aire-miel?
+% http://faculty.weber.edu/ewalker/Chem2990/Chem%202990%20Refractive%20Index%20Readings.pdf
+% 1.4865 -> 20%
+
+%\section*{Opcionales - aún no editados}
+%
+%\subsection*{Dicroísmo molecular - Elipticidad}
+%% \subsection*{Actividad óptica de soluciones}
+% https://en.wikipedia.org/wiki/Circular_dichroism
+% http://ja01.chem.buffalo.edu/~jochena/research/opticalactivity.html
+% Para leer más: \href{http://www.fbs.leeds.ac.uk/facilities/cd/aboutcd.htm}{University of Leeds - Faculty of Biological Sciences - About Circular Dichroism}
+% https://en.wikipedia.org/wiki/Circular_dichroism
+% https://en.wikipedia.org/wiki/Vibrational_circular_dichroism
+% http://chemwiki.ucdavis.edu/Physical_Chemistry/Spectroscopy/Electronic_Spectroscopy/Circular_Dichroism
+% http://www.chem.uci.edu/~dmitryf/manuals/Fundamentals/CD%20spectroscopy.pdf
+% 
+%
+%\subsection*{Polarización por reflexión}
+%
+%\item
+%Un haz de luz circularmente polarizada en sentido horario incide con el ángulo de polarización sobre la superficie de separación de dos medios transparentes.
+%¿Cuál es el estado de polarización del haz reflejado?
+%¿Y del transmitido?
+%Justifique.
+%
+%
+%\item
+%Sobre una superficie de separación aire–agua incide un rayo desde el aire.
+%¿Puede hacerlo en la forma que produzca reflexión total?
+%¿Puede hacerlo con el ángulo de polarización?
+%
+%
+%\item
+%Se tiene una lámina de caras paralelas construida con un vidrio de índice \num{1.5}.
+%Arriba de la misma hay aire y debajo hay agua de índice \num{1.33}.
+%Sobre la cara superior incide con el ángulo de Brewster una onda circularmente polarizada en sentido horario.
+%¿Cuál es el estado de polarización de la onda reflejada en la superficie inferior?
+%
+%
+%
+%\subsection*{Ejercicios con Lámina retardadora}
+%
+
+
+\end{enumerate}
+\end{document}
