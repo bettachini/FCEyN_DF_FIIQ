@@ -1,9 +1,13 @@
 Acerca de las guias
 ===================
 
+Último uso: curso de verano de 2017
+
 Guias de Laboratorio
 --------------------
 Estas guias de laboratorio estan escritas en LaTeX. 
+
+
 
 Listado de guias disponibles
 ----------------------------
