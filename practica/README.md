@@ -1,6 +1,8 @@
 Acerca de las guias
 ===================
 
+Último uso: curso de verano de 2017
+
 Guias de prácticas (TP)
 --------------------
 Estas guias para las prácticas estan escritas en LaTeX.
