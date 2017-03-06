@@ -11,84 +11,59 @@
 \graphicspath{{./redes/}}
 
 \begin{document}
-\objetivo{Medir el espectro de emisi\'on de una l\'ampara de sodio (Na) 
-    empleando redes de difracci\'on. Determinar los l\'\i mites del espectro 
-    visible utilizando una fuente de luz blanca. 
-\tematicas{Redes de difracci\'on por reflexi\'on y transmisi\'on, espectro de
-emisi\'on. }}
+\objetivo{Medir el espectro de emisión de una lámpara de sodio empleando redes de difracción.
+  Determinar los límites del espectro visible utilizando una fuente de luz blanca. 
+  \tematicas{Redes de difracción por reflexión y transmisión, espectro de emisión.}
+  }
 \maketitle
 
-\section{Redes de difracci\'on}
 
-Una red de difracci\'on es una estructura repetitiva que se utiliza para
-introducir una perturbaci\'on peri\'odica en un frente de onda. Entre las
-configuraciones m\'as sencillas se encuentra la red plana de transmisi\'on;
-formada por una serie de rendijas id\'enticas y equiespaciadas. 
+\section{Redes de difracción}
 
-Si un frente de ondas plano incide sobre una red, el patr\'on de difracci\'on
-observado sobre una pantalla alejada (difracci\'on de Fraunhoffer) presenta
-una distribuci\'on de intensidad dada por
+Una red de difracción es una estructura repetitiva que se utiliza para introducir una perturbación periódica en un frente de onda.
+Entre las configuraciones más sencillas se encuentra la red plana de transmisión; formada por una serie de rendijas idénticas y equiespaciadas. 
 
+Si un frente de ondas plano incide sobre una red, el patrón de difracción observado sobre una pantalla alejada (difracción de Fraunhoffer) presenta una distribución de intensidad dada por
 \begin{equation}
-    I(\theta) = I_0 \: \left( \frac{\sin \beta}{\beta} \right)^2 \: 
-    \left[ \frac{\sin N\alpha}{\sin \alpha}\right]^2,
-    \label{eq:difraccion}
+  I(\theta) = I_0 \: \left( \frac{\sin \beta}{\beta} \right)^2 \: 
+  \left[ \frac{\sin N\alpha}{\sin \alpha}\right]^2,
+  \label{eq:difraccion}
 \end{equation}
 donde 
 \begin{align*}
-    \alpha &= \frac{\pi b}{\lambda} \: 
-    \left(\sin \theta - \sin \theta_0 \right), \\
-    \beta  &= \frac{\pi a}{\lambda} \: 
-    \left(\sin \theta - \sin \theta_0 \right), \\
+  \alpha &= \frac{\pi b}{\lambda} \: 
+  \left(\sin \theta - \sin \theta_0 \right), \\
+  \beta  &= \frac{\pi a}{\lambda} \: 
+  \left(\sin \theta - \sin \theta_0 \right), \\
 \end{align*}
-siendo $a$ el ancho de cada rendija de la red, $b$ el espaciado entre ellas,
-$\lambda$ la longitud de onda del haz incidente, 
-$\theta_0$ el \'angulo que forma el haz incidente con la red y $\theta$ la
-posici\'on angular del haz cuya intensidad estamos observando en la pantalla.
+siendo \(a\) el ancho de cada rendija de la red, \(b\) el espaciado entre ellas, \(\lambda\) la longitud de onda del haz incidente, \(\theta_0\) el ángulo que forma el haz incidente con la red y \(\theta\) la posición angular del haz cuya intensidad estamos observando en la pantalla.
 
-En la ecuaci\'on~\eqref{eq:difraccion}, el factor entre par\'entesis 
-est\'a asociado a la {\it difracci\'on} producida por cada rendija
-presente en la red. El factor entre corchetes, por otro lado, da cuenta de la 
-{\it interferencia} entre las $N$ rendijas de la red. 
+En la ecuación \eqref{eq:difraccion}, el factor entre paréntesis está asociado a la \emph{difracción} producida por cada rendija presente en la red.
+El factor entre corchetes, por otro lado, da cuenta de la \emph{interferencia} entre las \(N\) rendijas de la red. 
 
-Para valores espec\'\i ficos de $\alpha$ y $\beta$, la intensidad registrada
-$I(\theta)$ presentar\'a m\'aximos principales sobre la pantalla de 
-observaci\'on, entre los cuales observar\'a tambi\'en m\'aximos secundarios.
-El resultado de esta combinaci\'on es la interferencia {\it modulada} por
-la figura de difracci\'on. Dado que en este caso la campana central de 
-difracci\'on resulta mucho m\'as ancha que la separaci\'on entre los m\'aximos
-de interferencia, los \'ordenes que usualmente se observan con una red 
-corresponden a la interferencia producida por las $N$ rendijas que componen
-la red de difracci\'on. Si nos concentramos entonces en el factor de 
-interferencia, encontramos que la intensidad resulta m\'axima cuando se
-verifica
-
+Para valores específicos de \(\alpha\) y \(\beta\), la intensidad registrada \(I(\theta)\) presentará máximos principales sobre la pantalla de observación, entre los cuales observará también máximos secundarios.
+El resultado de esta combinación es la interferencia \emph{modulada} por la figura de difracción.
+Dado que en este caso la campana central de difracción resulta mucho más ancha que la separación entre los máximos de interferencia, los órdenes que usualmente se observan con una red corresponden a la interferencia producida por las \(N\) rendijas que componen
+la red de difracción.
+Si nos concentramos entonces en el factor de interferencia, encontramos que la intensidad resulta máxima cuando se verifica
 \begin{equation}
-    \alpha = m \pi, \quad \quad \text{siendo } m = 0, \pm 1, \pm 2, \ldots.
+  \alpha = m \pi, \quad \quad \text{siendo } m = 0, \pm 1, \pm 2, \ldots.
 \end{equation}
 
-En base a esta condici\'on, el entero $m$ recibe el nombre de {\it orden de
-interferencia}. Reemplazando este valor en la expresi\'on para $\alpha$, 
-surge la condici\'on
-
+En base a esta condición, el entero \(m\) recibe el nombre de \emph{orden de interferencia}.
+Reemplazando este valor en la expresión para \(\alpha\), surge la condición
 \begin{equation}
-    \sin \theta_m - \sin \theta_0 = m \frac{\lambda}{b},
+  \sin \theta_m - \sin \theta_0 = m \frac{\lambda}{b},
 \end{equation}
-a partir de la cual es posible determinar el \'angulo $\theta_m$ 
-correspondiente al m\'aximo de interferencia de orden $m$. Esta expresi\'on
-se denomina com\'unmente {\it ecuaci\'on de la red}. 
+a partir de la cual es posible determinar el ángulo \(\theta_m\) correspondiente al máximo de interferencia de orden \(m\).
+Esta expresión se denomina comúnmente \emph{ecuación de la red}. 
 
-Observe que si el haz incidente no es monocrom\'atico, la ecuaci\'on de la
-red sigue teniendo validez, pero constituye ahora una condici\'on que se
-cumple para cada longitud de onda considerada. Reflexione acerca de c\'omo es
-la relaci\'on entre la posici\'on angular del m\'aximo de interferencia y la
-longitud de onda de la luz considerada. A mayor longitud de onda, ?`la 
-desviaci\'on del haz es mayor o menor?
+Observe que si el haz incidente no es monocromático, la ecuación de la red sigue teniendo validez, pero constituye ahora una condición que se cumple para cada longitud de onda considerada.
+Reflexione acerca de cómo es la relación entre la posición angular del máximo de interferencia y la longitud de onda de la luz considerada.
+A mayor longitud de onda, ¿la desviación del haz es mayor o menor?
 
-Analice c\'omo es la distribuci\'on de los m\'aximos cuando la incidencia 
-es normal ($\theta_0 = 0$) y cuando no lo es ($\theta_0 \neq 0$).
+Analice cómo es la distribución de los máximos cuando la incidencia es normal (\(\theta_0 = 0\)) y cuando no lo es (\(\theta_0 \neq 0\)).
 Verifique su análisis comparando con la figura \ref{fig:ordenes} 
-
 \begin{figure}
   \centering
   \def\svgwidth{\columnwidth}
@@ -98,145 +73,99 @@ Verifique su análisis comparando con la figura \ref{fig:ordenes}
 \end{figure}
 
 
+\section{Medición del espectro de emisión de una lámpara de sodio}
 
-\section{Medici\'on del espectro de emisi\'on de una l\'ampara de sodio}
-
-En esta pr\'actica se medir\'an la(s) longitud(es) de onda emitida(s) por una
-l\'ampara de sodio (Na) utilizando para ello una red de transmisi\'on y un 
-goni\'ometro (instrumento que se utiliza para medir \'angulos).
-
-Los pasos importantes a seguir en esta experiencia son:
-
-\begin{enumerate}
-\item {\bf Calibraci\'on del goni\'ometro}. 
-
-El goni\'ometro consta de una platina giratoria solidaria a un limbo graduado,
-sobre la cual se coloca la red. Un colimador, para crear un haz incidente de 
-rayos paralelos, y un anteojo que permite llevar el plano de observación al 
-infinito, el anteojo es móvil y posee un vernier para medir el ángulo de giro
-sobre el limbo graduado. El anteojo tiene un retículo en forma de cruz que 
-permite definir mejor las posiciones que se miden.
-
-Antes de medir, el dispositivo debe ser ajustado para trabajar bajo las 
-condiciones de difracción de Fraunhofer e incidencia normal. Para ello debe 
-enfocar el colimador y el anteojo. Primero se enfoca el anteojo mirando un 
-objeto distante (enfoque a infinito) desplazando el ocular del tubo. Luego se 
-enfoca el colimador enfrentándolo al anteojo y desplazando la rendija que se 
-halla adherida a él hasta obtener una imagen nítida de ella.
-
-A continuación se debe ubicar la red paralela al eje del goniómetro y 
-aproximadamente perpendicular al haz colimado. La red se encuentra paralela 
-al eje cuando la imagen de la rendija a través de la red se halle centrada 
-y paralela al eje vertical del retículo. Para lograr posicionarla 
-u correctamente la platina cuenta con tres tornillos de nivelación.
+En esta práctica se medirán la(s) longitud(es) de onda emitida(s) por una lámpara de sodio (\isotope{Na}) utilizando para ello una red de transmisión y un goniómetro (instrumento que se utiliza para medir ángulos).
+Se describen a continuación los pasos a seguir en esta experiencia.
 
 
-\item {\bf Posicionamiento de la red en el goni\'ometro.} % (Ver Ap\'endice). 
+\subsection{Calibración del goniómetro}
+  El goniómetro consta de una platina giratoria solidaria a un limbo graduado, sobre la cual se coloca la red.
+  Un colimador, para crear un haz incidente de rayos paralelos, y un anteojo que permite llevar el plano de observación al infinito, el anteojo es móvil y posee un vernier para medir el ángulo de giro sobre el limbo graduado.
+  El anteojo tiene un retículo en forma de cruz que permite definir mejor las posiciones que se miden.
 
+  Antes de medir, el dispositivo debe ser ajustado para trabajar bajo las condiciones de difracción de Fraunhofer e incidencia normal.
+  Para ello debe enfocar el colimador y el anteojo.
+Primero se enfoca el anteojo mirando un objeto distante (enfoque a infinito) desplazando el ocular del tubo.
+  Luego se enfoca el colimador enfrentándolo al anteojo y desplazando la rendija que se halla adherida a él hasta obtener una imagen nítida de ella.
+
+  A continuación se debe ubicar la red paralela al eje del goniómetro y aproximadamente perpendicular al haz colimado.
+  La red se encuentra paralela al eje cuando la imagen de la rendija a través de la red se halle centrada y paralela al eje vertical del retículo.
+  Para lograr posicionarla correctamente la platina cuenta con tres tornillos de nivelación.
+
+
+\subsection{Posicionamiento de la red en el goniómetro} % (Ver Ap\'endice). 
 \begin{figure}[t!]
     \centering
     \includegraphics[width=8.5cm]{LG11--002.png}
-    \caption{Esquema del dispositivo. Note la ubicación de la red respecto del haz proveniente de la lámpara de Na.
+    \caption{Esquema del dispositivo.
+      Note la ubicación de la red respecto del haz proveniente de la lámpara de Na.
     }
     \label{fig:1}
 \end{figure}
+En la figura \ref{fig:1} se muestra el dispositivo a montar.
+La red se coloca sobre la platina de modo que ésta quede perpendicular al haz incidente y centrada, es decir que el haz debe incidir en forma paralela a la normal de la red (\(\theta_0 = 0\)).
+¿Por qué?
+Si así no fuera, ¿qué precaución debe tomar al realizar los cálculos?
+Para asegurarse incidencia normal se ubica el anteojo enfrentando al colimador y se lee la posición angular (\(L_0\)).
+A continuación, se buscan los máximos correspondientes al mayor orden de interferencia visible; primero hacia un lado y luego hacia el otro, registrando los ángulos correspondientes.
+Si la desviación respecto de \(L_0\) correspondiente a un mismo orden de interferencia, es idéntica hacia ambos lados se puede considerar que la red está ubicada en forma perpendicular al haz incidente.
+Justifique por qué esta afirmación es válida).
+Si observa que la red no está centrada, gire la platina levemente y determine nuevamente la desviación de los máximos hacia ambos lados hasta que sus observaciones coincidan.
 
-En la Figura \ref{fig:1} se muestra el dispositivo a montar. La red se coloca 
-sobre la platina de modo que \'esta quede perpendicular al haz 
-incidente y centrada, es decir que el haz debe incidir en forma 
-paralela a la normal de la red ($\theta_0 = 0$). ?`Por qu\'e? Si 
-as\'\i\ no fuera, ?`qu\'e precauci\'on debe tomar al realizar los 
-c\'alculos?
 
-        Para asegurarse incidencia normal se ubica el anteojo enfrentando al 
-        colimador y se lee la posici\'on angular ($L_0$). A continuaci\'on, 
-        se buscan los m\'aximos correspondientes al mayor orden de 
-        interferencia visible; primero hacia un lado y luego hacia el otro,
-        registrando los \'angulos correspondientes. Si la desviaci\'on respecto
-        de $L_0$ correspondiente a un mismo orden de interferencia, es 
-        id\'entica hacia ambos lados se puede considerar que la red est\'a 
-        ubicada en forma perpendicular al haz incidente. (Justifique por qu\'e
-        esta afirmaci\'on es v\'alida). Si observa que la red no est\'a 
-        centrada, gire la platina levemente y determine nuevamente la 
-        desviaci\'on de los m\'aximos hacia ambos lados hasta que sus 
-        observaciones coincidan.
-
-    \item {\bf Mediciones}. Conociendo la periodicidad de la red y midiendo los
-        \'angulos asociados a los  m\'aximos de interferencia se pueden 
-        calcular las longitudes de onda emitidas por la l\'ampara de sodio, a
-        partir de la ecuaci\'on de la red. Mida todos los \'ordenes observables
-        y construya un gr\'afico de $\sin \theta_m$ en funci\'on de $m$. 
-        ?`Cu\'antas longitudes de onda espera observar?
+\subsection{Mediciones}
+  Conociendo la periodicidad de la red y midiendo los ángulos asociados a los  máximos de interferencia se pueden calcular las longitudes de onda emitidas por la lámpara de \isotope{Na}, a partir de la ecuación de la red.
+  Mida todos los órdenes observables y construya un gráfico de \(\sin{\theta_m}\) en función de \(m\). 
+  ¿Cuántas longitudes de onda espera observar?
         
-        {\bf El doblete del sodio}. En la l\'ampara de sodio hay presentes,
-        en realidad, dos longitudes 
-        de onda correspondientes a lo que nuestros ojos perciben como un 
-        color amarillo. Estas l\'\i neas de emisi\'on son muy cercanas y no es
-        posible resolverlas en el primer orden de interferencia. 
-        ?`A partir de qu\'e orden puede apreciar el doblete del sodio? 
-        Intente medirlo.
-\end{enumerate}
+        
+\subsection{El doblete del sodio}
+  En la lámpara de \isotope{Na} hay presentes, en realidad, dos longitudes de onda correspondientes a lo que nuestros ojos perciben como un color amarillo.
+  Estas líneas de emisión son muy cercanas y no es posible resolverlas en el primer orden de interferencia. 
+  ¿A partir de qué orden puede apreciar el doblete del \isotope{Na}? 
+  Intente medirlo.
 
-\section{Determinaci\'on de los l\'\i mites del espectro visible}
 
-Reemplace ahora la l\'ampara de sodio por una de luz blanca y observe su  
-espectro de emisi\'on empleando el mismo montaje experimental que utiliz\'o 
-previamente. En estas condiciones, 
 
+\section{Determinación de los límites del espectro visible}
+
+Reemplace ahora la lámpara de \isotope{Na} por una de luz blanca y observe su espectro de emisión empleando el mismo montaje experimental que utilizó previamente.
+En estas condiciones, 
 \begin{enumerate}
-    \item Responda: el espectro observado, ?`es distinto del de la l\'ampara 
-        de sodio? ?`En qu\'e aspectos? ?`A que se debe la diferencia? 
-    \item Mida las longitudes de onda asociadas a los l\'\i mites que percibe.
+  \item 
+¿En qué aspectos difiere el espectro observado al de la lámpara de \isotope{Na}?
+¿A que se debe la diferencia? 
+  \item Mida las longitudes de onda asociadas a los límites que percibe.
 \end{enumerate}
 
 
-\section{Redes de difracci\'on por reflexi\'on}
+\section{Redes de difracción por reflexión}
 
-Una red de reflexi\'on es una red de difracci\'on constituida por una serie
-de surcos hechos sobre una superficie met\'alica. La mayor\'\i a de las redes
-de reflexi\'on est\'an construidas de forma tal que la posici\'on del m\'aximo
-de difracci\'on es diferente de la posici\'on del orden cero de interferencia.
-De este modo se logra que la mayor intensidad de luz (asociada al 
-m\'aximo principal de difracci\'on) est\'e dirigida hacia \'ordenes superiores
-de interferencia donde la red tiene mayor poder resolvente. Este tipo de 
-construcci\'on recibe el nombre de {\it blaze} o, en castellano, {\it
-resplandor}. Con estas redes resulta conveniente trabajar en incidencia oblicua
-(casi razante), a fin de poder observar mejor los distintos \'ordenes de
-interferencia. 
+Una red de reflexión es una red de difracción constituida por una serie de surcos hechos sobre una superficie metálica.
+La mayoría de las redes de reflexión están construidas de forma tal que la posición del máximo de difracción es diferente de la posición del orden cero de interferencia.
+De este modo se logra que la mayor intensidad de luz (asociada al máximo principal de difracción) esté dirigida hacia órdenes superiores de interferencia donde la red tiene mayor poder resolvente.
+Este tipo de construcción recibe el nombre de \emph{blaze} o, en castellano, \emph{resplandor}.
+Con estas redes resulta conveniente trabajar en incidencia oblicua(casi razante), a fin de poder observar mejor los distintos órdenes de interferencia. 
 
-No obstante sus diferencias con las redes de transmisi\'on, resulta f\'acil
-mostrar que la ecuaci\'on para este tipo de redes es id\'entica a la obtenida
-para aquellas. Mu\'estrelo. 
+No obstante sus diferencias con las redes de transmisión, resulta fácil mostrar que la ecuación para este tipo de redes es idéntica a la obtenida para aquellas.
+Muéstrelo. 
 
-Dado que se trabaja con incidencia oblicua, es importante medir en forma 
-precisa el \'angulo de incidencia. Para ello, emplearemos nuevamente el 
-goni\'ometro. 
+Dado que se trabaja con incidencia oblicua, es importante medir en forma precisa el ángulo de incidencia.
+Para ello, emplearemos nuevamente el goniómetro. 
 
-Una forma de fijar los \'angulos en el goni\'ometro en una posici\'on de 
-referencia conocida consiste en colocar el \'angulo cero de la platina en 
-forma coincidente con el haz incidente. Esto se logra observando la ranura
-del colimador con el telescopio, ya que en esta posici\'on el colimador
-y el telescopio forman un \'angulo de $\pi$~rad. Mueva entonces la platina
-hasta hacer coincidir la marca de 180$^\circ$ con el cero del vernier del
-telescopio. Coloque ahora la red poniendo atenci\'on a que quede centrada en
-la platina, y de modo tal de lograr un \'angulo de incidencia no menor a 
-65$^\circ$ (?`Por qu\'e?) Calcule, a partir de la medici\'on del \'angulo 
-asociado al orden cero, la posici\'on de la normal de la red. Mida los 
-\'angulos de cada orden y cada longitud de onda. A partir de los datos 
-obtenidos, determine las longitudes de onda. 
+Una forma de fijar los ángulos en el goniómetro en una posición de referencia conocida consiste en colocar el ángulo cero de la platina en forma coincidente con el haz incidente.
+Esto se logra observando la ranura del colimador con el telescopio, ya que en esta posición el colimador y el telescopio forman un ángulo de \(\pi\)~rad.
+Mueva entonces la platina hasta hacer coincidir la marca de \SI{180}{\degree} con el cero del vernier del telescopio.
+Coloque ahora la red poniendo atención a que quede centrada en la platina, y de modo tal de lograr un ángulo de incidencia no menor a \SI{65}{\degree} (¿por qué?).
+Calcule, a partir de la medición del ángulo asociado al orden cero, la posición de la normal de la red.
+Mida los ángulos de cada orden y cada longitud de onda.
+A partir de los datos obtenidos, determine las longitudes de onda. 
 
 
 
-% \section*{Ap\'endice}
+% \section*{Apéndice}
 
-<<<<<<< HEAD
-=======
-
-
-
-% \section*{Ap\'endice}
-
->>>>>>> ad104c7a42e80d40c124c0d895c6eb3e68874fce
 % El goni\'ometro consta de una platina giratoria solidaria a un limbo graduado,
 % sobre la cual se coloca la red. Un colimador, para crear un haz incidente de 
 % rayos paralelos, y un anteojo que permite llevar el plano de observación al 
@@ -258,11 +187,6 @@ obtenidos, determine las longitudes de onda.
 % correctamente la platina cuenta con tres tornillos de nivelación.
 
 
-
-
-
-
-        
 %\begin{sabermas}
 %Para saber mas haria falta leer un poco las siguientes referencias.
 %indeed up to 90\% of the energy is in wave modes for the lower
@@ -270,6 +194,8 @@ obtenidos, determine las longitudes de onda.
 %dynamics, it is also clear that they do not govern the smaller scales.
 %This puts theories in which eddies are not accounted for on.
 %\end{sabermas}
+
+
 
 \nocite{Alonso1998,Jenkins2001,Hecht1986}
 \bibliographystyle{unsrt}
