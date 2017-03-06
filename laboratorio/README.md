@@ -8,19 +8,19 @@ Estas guias de laboratorio estan escritas en LaTeX.
 Listado de guias disponibles
 ----------------------------
 
-1. Electrostatica (cuba electrolitica)
-1. Circuitos de corriente continua (curvas I-V, leyes de Ohm, Kirchoff, 
-    Thevenin)
-1. Magnetismo (leyes de Ampere y de Biot-Savart)
-1. Induccion magnetica (fuerza electromotriz inducida y ley de Faraday)
-1. Circuito RC (transitorios de carga y descarga de un circuito RC)
-1. Circuito RLC (resonancia en serie y paralelo)
-1. Ondas mecanicas (ondas estacionarias en una cuerda)
-1. Ondas acusticas (tubo de Kundt)
-1. Interferencia (biprisma de Fresnel)
-1. Difraccion (aberturas, obstaculos)
-1. Redes de difraccion (espectro de la lampara de sodio)
-1. Polarizacion (ley de Malus, polarizacion por reflexion)
+- electrostatica: campo eléctrico en cuba.
+- liquidos: conducción en cuba electrolítica con NaCl.
+- ohm: Circuitos de corriente continua, curvas I-V, leyes de Ohm, Kirchhoff, Thévenin.
+- magnetismo: leyes de Ampère y de Biot-Savart.
+- induccion: fuerza electromotríz inducida y ley de Faraday.
+- rc: transitorios de carga y descarga de un circuito RC.
+- rlc: resonancia en serie y paralelo.
+- cuerda: ondas estacionarias en una cuerda.
+- acusticas: tubo de Kundt.
+- interferencia: biprisma de Fresnel.
+- difraccion: aberturas, obstaculos.
+- redes: de difraccion, espectro de la lampara de sodio.
+- polarizacion: ley de Malus, polarización por reflexión.
 
 
 Acerca del nuevo diseño de figuras
